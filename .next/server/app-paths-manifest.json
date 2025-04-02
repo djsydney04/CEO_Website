@@ -1,0 +1,5 @@
+{
+  "/launch-fund/page": "app/launch-fund/page.js",
+  "/page": "app/page.js",
+  "/orbit/page": "app/orbit/page.js"
+}
