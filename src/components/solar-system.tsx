@@ -34,24 +34,24 @@ export function SolarSystem() {
     window.addEventListener('resize', updateSize)
 
     // Create sun
-    const sunGeometry = new THREE.IcosahedronGeometry(2, 4) // Higher detail level
+    const sunGeometry = new THREE.IcosahedronGeometry(2, 5) // Higher detail level
     const sunMaterial = new THREE.MeshStandardMaterial({ 
       color: 0x545454,
       roughness: 0.4,
       metalness: 0.7,
-      emissive: 0x222222,
-      emissiveIntensity: 0.5,
+      emissive: 0x333333,
+      emissiveIntensity: 0.6,
       flatShading: false
     })
     const sun = new THREE.Mesh(sunGeometry, sunMaterial)
     scene.add(sun)
 
-    // Sun glow effect
-    const sunGlowGeometry = new THREE.SphereGeometry(2.2, 32, 32)
+    // Sun glow effect - more subtle
+    const sunGlowGeometry = new THREE.SphereGeometry(2.2, 36, 36)
     const sunGlowMaterial = new THREE.MeshBasicMaterial({
       color: 0x444444,
       transparent: true,
-      opacity: 0.2,
+      opacity: 0.3,
       side: THREE.BackSide
     })
     const sunGlow = new THREE.Mesh(sunGlowGeometry, sunGlowMaterial)
@@ -74,27 +74,27 @@ export function SolarSystem() {
     // Create planets
     const planets: THREE.Mesh[] = []
     const orbits: THREE.Line[] = []
-    // Using different shades of gray
-    const planetColors = [0x9e9e9e, 0x757575, 0x616161, 0x424242]
+    // Using more refined shades of gray for better contrast and visual interest
+    const planetColors = [0xaaaaaa, 0x888888, 0x666666, 0x444444]
     
     for (let i = 0; i < 4; i++) {
-      // Create planet
-      const planetGeometry = new THREE.IcosahedronGeometry(0.5, 3) // Increase detail level
+      // Create planet with more detail
+      const planetGeometry = new THREE.IcosahedronGeometry(0.5, 4) // Increase detail level
       const planetMaterial = new THREE.MeshStandardMaterial({ 
         color: planetColors[i],
-        roughness: 0.7,
-        metalness: 0.3,
+        roughness: 0.6,
+        metalness: 0.4,
         flatShading: false
       })
       const planet = new THREE.Mesh(planetGeometry, planetMaterial)
       
-      // Create planet atmosphere
+      // Create planet atmosphere with more refined look
       if (i % 2 === 0) {
-        const atmosphereGeometry = new THREE.SphereGeometry(0.55, 32, 32)
+        const atmosphereGeometry = new THREE.SphereGeometry(0.55, 36, 36)
         const atmosphereMaterial = new THREE.MeshBasicMaterial({
-          color: 0xaaaaaa,
+          color: 0xcccccc,
           transparent: true,
-          opacity: 0.2,
+          opacity: 0.15,
           side: THREE.BackSide
         })
         const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial)
@@ -122,12 +122,12 @@ export function SolarSystem() {
       })
       const orbit = new THREE.Line(orbitGeometry, orbitMaterial)
       
-      // Create satellite for each planet
+      // Create satellite for each planet with better detailing
       if (i > 0) {
         const moonSize = 0.15
-        const moonGeometry = new THREE.IcosahedronGeometry(moonSize, 2)
+        const moonGeometry = new THREE.IcosahedronGeometry(moonSize, 3)
         const moonMaterial = new THREE.MeshStandardMaterial({ 
-          color: 0xf5f5f5,
+          color: 0xdddddd,
           roughness: 0.5,
           metalness: 0.3,
           flatShading: false
@@ -137,13 +137,13 @@ export function SolarSystem() {
         moon.position.x = moonOrbitRadius
         planet.add(moon)
         
-        // Add ring to last planet
+        // Add ring to last planet with more refinement
         if (i === 3) {
-          const ringGeometry = new THREE.RingGeometry(0.7, 1.2, 32)
+          const ringGeometry = new THREE.RingGeometry(0.7, 1.2, 48)
           const ringMaterial = new THREE.MeshBasicMaterial({ 
-            color: 0xcccccc, 
+            color: 0xbbbbbb, 
             transparent: true, 
-            opacity: 0.6,
+            opacity: 0.5,
             side: THREE.DoubleSide
           })
           const ring = new THREE.Mesh(ringGeometry, ringMaterial)
@@ -158,8 +158,8 @@ export function SolarSystem() {
       orbits.push(orbit)
     }
 
-    // Add some stars as sprite particles
-    const starCount = 500 // More stars
+    // Add more stars for a denser field
+    const starCount = 800 // More stars
     const starGeometry = new THREE.BufferGeometry()
     const starPositions = new Float32Array(starCount * 3)
     const starSizes = new Float32Array(starCount)
@@ -167,9 +167,9 @@ export function SolarSystem() {
     
     const colorOptions = [
       new THREE.Color(0xffffff),
-      new THREE.Color(0xcccccc),
-      new THREE.Color(0xaaaaaa),
-      new THREE.Color(0xdddddd)
+      new THREE.Color(0xeeeeee),
+      new THREE.Color(0xdddddd),
+      new THREE.Color(0xcccccc)
     ]
     
     for (let i = 0; i < starCount; i++) {
@@ -218,13 +218,18 @@ export function SolarSystem() {
       
       const elapsedTime = (Date.now() - startTime) / 1000
       
-      // Rotate sun
-      sun.rotation.y += 0.005
-      sun.rotation.x = Math.sin(elapsedTime * 0.3) * 0.1
+      // More dynamic sun rotation
+      sun.rotation.y += 0.003
+      sun.rotation.x = Math.sin(elapsedTime * 0.2) * 0.05
       
-      // Rotate sun glow in opposite direction
-      sunGlow.rotation.y -= 0.003
-      sunGlow.rotation.z += 0.002
+      // Rotate sun glow in opposite direction with subtle pulsing
+      sunGlow.rotation.y -= 0.002
+      sunGlow.rotation.z += 0.001
+      sunGlow.scale.set(
+        1 + Math.sin(elapsedTime * 0.5) * 0.03,
+        1 + Math.sin(elapsedTime * 0.5) * 0.03,
+        1 + Math.sin(elapsedTime * 0.5) * 0.03
+      )
       
       // Move camera in a gentle orbit
       const cameraRadius = 15
@@ -234,7 +239,7 @@ export function SolarSystem() {
       camera.position.y = 5 + Math.sin(elapsedTime * 0.15) * 2
       camera.lookAt(0, 0, 0)
 
-      // Rotate and orbit planets
+      // Rotate and orbit planets with more natural motion
       planets.forEach((planet, index) => {
         const orbitRadius = 3 + (index * 2.5)
         const speed = 0.002 / (index * 0.3 + 1)
@@ -247,8 +252,9 @@ export function SolarSystem() {
         // Add some vertical movement
         planet.position.y = Math.sin(time * 2) * 0.5
         
-        // Planet rotation
-        planet.rotation.y += 0.01 + index * 0.005
+        // More natural planet rotation with varying speeds
+        planet.rotation.y += 0.007 + index * 0.002
+        planet.rotation.x = Math.sin(elapsedTime * 0.1 + index) * 0.05
         
         // If the planet has a ring (last planet), rotate it differently
         if (index === 3 && planet.children.length > 0) {

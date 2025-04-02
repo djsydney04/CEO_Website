@@ -43,73 +43,140 @@ export function RocketLaunch() {
     scene.add(directionalLight)
 
     // Create rocket body
-    const rocketGeometry = new THREE.CylinderGeometry(0.5, 1, 4, 16) // More segments for smoother appearance
+    const rocketGeometry = new THREE.CylinderGeometry(0.5, 0.8, 4.5, 24) // Better proportions, more detail
     const rocketMaterial = new THREE.MeshStandardMaterial({ 
       color: 0x545454, 
-      roughness: 0.5,
-      metalness: 0.8,
+      roughness: 0.3,
+      metalness: 0.9,
     }) // Main gray color with more shine
     const rocket = new THREE.Mesh(rocketGeometry, rocketMaterial)
     
     // Create rocket nose
-    const noseGeometry = new THREE.ConeGeometry(0.5, 1, 16) // More segments for smoother appearance
+    const noseGeometry = new THREE.ConeGeometry(0.5, 1.2, 24) // More segments, better proportions
     const noseMaterial = new THREE.MeshStandardMaterial({ 
-      color: 0x757575,
-      roughness: 0.4,
-      metalness: 0.7,
-    }) // Darker gray
+      color: 0x666666,
+      roughness: 0.2,
+      metalness: 0.8,
+    }) // Darker gray that matches solar system
     const nose = new THREE.Mesh(noseGeometry, noseMaterial)
-    nose.position.y = 2.5
+    nose.position.y = 2.8 // Better position
     rocket.add(nose)
 
     // Add windows to the rocket
-    const windowGeometry = new THREE.CircleGeometry(0.15, 16) // More segments for smoother circle
+    const windowGeometry = new THREE.CircleGeometry(0.12, 24) // More segments for smoother circle
     const windowMaterial = new THREE.MeshStandardMaterial({ 
       color: 0xeeeeee,
       roughness: 0.1,
       metalness: 0.9,
-      emissive: 0xaaaaaa,
-      emissiveIntensity: 0.5,
+      emissive: 0xcccccc,
+      emissiveIntensity: 0.7,
     })
     
-    for (let i = 0; i < 3; i++) {
+    // Create a row of windows
+    for (let i = 0; i < 4; i++) {
       const window = new THREE.Mesh(windowGeometry, windowMaterial)
-      window.position.y = 0.5 * i
-      window.position.z = 0.5
+      window.position.y = 0.2 + (i * 0.6)
+      window.position.z = 0.48
       window.rotation.x = Math.PI / 2
       rocket.add(window)
     }
 
-    // Create fins
-    const finGeometry = new THREE.BoxGeometry(0.6, 1.2, 0.1)
+    // Create better fins
+    const finShape = new THREE.Shape()
+    finShape.moveTo(0, 0)
+    finShape.lineTo(1.2, -0.8)
+    finShape.lineTo(0.8, -1.5)
+    finShape.lineTo(0, -1.2)
+    finShape.lineTo(0, 0)
+
+    const finExtrudeSettings = {
+      steps: 1,
+      depth: 0.1,
+      bevelEnabled: true,
+      bevelThickness: 0.05,
+      bevelSize: 0.05,
+      bevelSegments: 3
+    }
+
+    const finGeometry = new THREE.ExtrudeGeometry(finShape, finExtrudeSettings)
     const finMaterial = new THREE.MeshStandardMaterial({ 
-      color: 0x9e9e9e,
+      color: 0x757575,
       roughness: 0.4,
-      metalness: 0.6,
-    }) // Light gray
+      metalness: 0.7,
+    }) 
     
     for (let i = 0; i < 3; i++) {
       const fin = new THREE.Mesh(finGeometry, finMaterial)
-      fin.position.y = -1.5
-      fin.position.x = Math.cos((i / 3) * Math.PI * 2) * 1
-      fin.position.z = Math.sin((i / 3) * Math.PI * 2) * 1
-      fin.lookAt(new THREE.Vector3(fin.position.x * 2, -1.5, fin.position.z * 2))
+      fin.position.y = -1.8
+      fin.rotation.y = (i / 3) * Math.PI * 2
       rocket.add(fin)
     }
     
     // Add stripes to rocket
-    const stripeGeometry = new THREE.CylinderGeometry(0.51, 0.51, 0.3, 16, 1, true)
+    const stripeGeometry = new THREE.CylinderGeometry(0.51, 0.51, 0.2, 24, 1, true)
     const stripeMaterial = new THREE.MeshStandardMaterial({
       color: 0x333333,
       roughness: 0.5,
       metalness: 0.5,
     })
     
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const stripe = new THREE.Mesh(stripeGeometry, stripeMaterial)
-      stripe.position.y = -0.5 + i
+      stripe.position.y = -1.5 + (i * 0.8)
       rocket.add(stripe)
     }
+
+    // Add a bottom engine section
+    const engineBaseGeometry = new THREE.CylinderGeometry(0.7, 0.9, 0.5, 24)
+    const engineBaseMaterial = new THREE.MeshStandardMaterial({
+      color: 0x444444,
+      roughness: 0.7,
+      metalness: 0.3,
+    })
+    const engineBase = new THREE.Mesh(engineBaseGeometry, engineBaseMaterial)
+    engineBase.position.y = -2.4
+    rocket.add(engineBase)
+
+    // Add engine nozzles
+    const nozzleGeometry = new THREE.CylinderGeometry(0.2, 0.3, 0.5, 24)
+    const nozzleMaterial = new THREE.MeshStandardMaterial({
+      color: 0x333333,
+      roughness: 0.8,
+      metalness: 0.4,
+    })
+    
+    for (let i = 0; i < 3; i++) {
+      const nozzle = new THREE.Mesh(nozzleGeometry, nozzleMaterial)
+      const angle = (i / 3) * Math.PI * 2
+      nozzle.position.x = Math.cos(angle) * 0.4
+      nozzle.position.z = Math.sin(angle) * 0.4
+      nozzle.position.y = -2.8
+      rocket.add(nozzle)
+    }
+
+    // Add an antenna on top
+    const antennaGeometry = new THREE.CylinderGeometry(0.02, 0.02, 0.5, 8)
+    const antennaMaterial = new THREE.MeshStandardMaterial({
+      color: 0x666666,
+      roughness: 0.4,
+      metalness: 0.6,
+    })
+    const antenna = new THREE.Mesh(antennaGeometry, antennaMaterial)
+    antenna.position.y = 3.4
+    rocket.add(antenna)
+
+    // Add antenna top
+    const antennaTopGeometry = new THREE.SphereGeometry(0.05, 8, 8)
+    const antennaTopMaterial = new THREE.MeshStandardMaterial({
+      color: 0xcccccc,
+      roughness: 0.2,
+      metalness: 0.8,
+      emissive: 0xaaaaaa,
+      emissiveIntensity: 0.3,
+    })
+    const antennaTop = new THREE.Mesh(antennaTopGeometry, antennaTopMaterial)
+    antennaTop.position.y = 3.7
+    rocket.add(antennaTop)
 
     scene.add(rocket)
 
@@ -153,17 +220,17 @@ export function RocketLaunch() {
     }
 
     // Create particle system for exhaust - use sprite material for better particles
-    const particleCount = 500
+    const particleCount = 600 // More particles for better effect
     const particleGeometry = new THREE.BufferGeometry()
     const particlePositions = new Float32Array(particleCount * 3)
     const particleSizes = new Float32Array(particleCount)
     const particleColors = new Float32Array(particleCount * 3)
     
     const exhaustColors = [
-      new THREE.Color(0xcccccc), // White-ish
-      new THREE.Color(0x999999), // Light gray
-      new THREE.Color(0x777777), // Gray
-      new THREE.Color(0xaaaaaa)  // Medium gray
+      new THREE.Color(0xeeeeee), // Light gray
+      new THREE.Color(0xcccccc), // Medium light gray
+      new THREE.Color(0xaaaaaa), // Medium gray
+      new THREE.Color(0x888888)  // Darker gray
     ]
     
     for (let i = 0; i < particleCount; i++) {
@@ -199,9 +266,9 @@ export function RocketLaunch() {
     const particleSystem = new THREE.Points(particleGeometry, particleMaterial)
     rocket.add(particleSystem)
 
-    // Add flame light
-    const flameLight = new THREE.PointLight(0xffffff, 3, 8)
-    flameLight.position.y = -2
+    // Add flame light with more intensity
+    const flameLight = new THREE.PointLight(0xeeeeee, 4, 10)
+    flameLight.position.y = -3
     rocket.add(flameLight)
 
     // Add clouds - use sphere geometry for smoother clouds
@@ -304,13 +371,13 @@ export function RocketLaunch() {
       rocket.position.y = -7 + (maxHeight * easeOutCubic)
       
       // Add some wobble to the rocket - more natural movement
-      rocket.rotation.z = Math.sin(elapsedTime * 2) * 0.05
+      rocket.rotation.z = Math.sin(elapsedTime * 2) * 0.03 // Less wobble
       
       // Rotate the rocket slowly
       rocket.rotation.y += 0.01
       
-      // Update flame light intensity based on rocket thrust
-      const thrustVariation = Math.sin(elapsedTime * 15) * 0.5 + 2.5
+      // Update flame light intensity based on rocket thrust with more variation
+      const thrustVariation = Math.sin(elapsedTime * 20) * 0.7 + 3
       flameLight.intensity = thrustVariation
       
       // Camera follows the rocket with some lag
