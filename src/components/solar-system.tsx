@@ -13,8 +13,8 @@ export function SolarSystem() {
     const scene = new THREE.Scene()
     scene.background = new THREE.Color(0xffffff) // White background
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000)
-    const renderer = new THREE.WebGLRenderer({ antialias: false }) // Pixelated effect
-    renderer.setPixelRatio(1) // Pixelated effect
+    const renderer = new THREE.WebGLRenderer({ antialias: true }) // Enable anti-aliasing for smoother edges
+    renderer.setPixelRatio(window.devicePixelRatio) // Use device pixel ratio for crisp rendering
     
     // Make it responsive
     const updateSize = () => {
@@ -31,10 +31,24 @@ export function SolarSystem() {
     window.addEventListener('resize', updateSize)
 
     // Create sun
-    const sunGeometry = new THREE.IcosahedronGeometry(2, 1) // Low poly for pixelated look
-    const sunMaterial = new THREE.MeshBasicMaterial({ color: 0x545454 }) // Gray color
+    const sunGeometry = new THREE.IcosahedronGeometry(2, 3) // Increase detail level
+    const sunMaterial = new THREE.MeshStandardMaterial({ 
+      color: 0x545454,
+      roughness: 0.7,
+      metalness: 0.3,
+      flatShading: true
+    })
     const sun = new THREE.Mesh(sunGeometry, sunMaterial)
     scene.add(sun)
+
+    // Add ambient light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+    scene.add(ambientLight)
+    
+    // Add directional light
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1)
+    directionalLight.position.set(5, 5, 5)
+    scene.add(directionalLight)
 
     // Create planets
     const planets: THREE.Mesh[] = []
@@ -44,16 +58,21 @@ export function SolarSystem() {
     
     for (let i = 0; i < 4; i++) {
       // Create planet
-      const planetGeometry = new THREE.IcosahedronGeometry(0.5, 0) // Even more pixelated
-      const planetMaterial = new THREE.MeshBasicMaterial({ color: planetColors[i] })
+      const planetGeometry = new THREE.IcosahedronGeometry(0.5, 2) // Increase detail level
+      const planetMaterial = new THREE.MeshStandardMaterial({ 
+        color: planetColors[i],
+        roughness: 0.8,
+        metalness: 0.2,
+        flatShading: true
+      })
       const planet = new THREE.Mesh(planetGeometry, planetMaterial)
       
       // Create orbit
       const orbitRadius = 3 + (i * 2)
       const orbitGeometry = new THREE.BufferGeometry()
       const orbitPoints = []
-      for (let j = 0; j <= 64; j++) {
-        const angle = (j / 64) * Math.PI * 2
+      for (let j = 0; j <= 128; j++) { // More points for smoother orbit
+        const angle = (j / 128) * Math.PI * 2
         orbitPoints.push(new THREE.Vector3(
           Math.cos(angle) * orbitRadius,
           0,
@@ -67,8 +86,13 @@ export function SolarSystem() {
       // Create satellite for each planet
       if (i > 0) {
         const moonSize = 0.15
-        const moonGeometry = new THREE.IcosahedronGeometry(moonSize, 0)
-        const moonMaterial = new THREE.MeshBasicMaterial({ color: 0xf5f5f5 })
+        const moonGeometry = new THREE.IcosahedronGeometry(moonSize, 1)
+        const moonMaterial = new THREE.MeshStandardMaterial({ 
+          color: 0xf5f5f5,
+          roughness: 0.5,
+          metalness: 0.3,
+          flatShading: true
+        })
         const moon = new THREE.Mesh(moonGeometry, moonMaterial)
         const moonOrbitRadius = 1
         moon.position.x = moonOrbitRadius
@@ -82,23 +106,27 @@ export function SolarSystem() {
     }
 
     // Add some stars
-    const starCount = 100
+    const starCount = 200 // More stars
     const starGeometry = new THREE.BufferGeometry()
     const starPositions = new Float32Array(starCount * 3)
+    const starSizes = new Float32Array(starCount)
     
     for (let i = 0; i < starCount; i++) {
       starPositions[i * 3] = (Math.random() - 0.5) * 100
       starPositions[i * 3 + 1] = (Math.random() - 0.5) * 100
       starPositions[i * 3 + 2] = (Math.random() - 0.5) * 100
+      starSizes[i] = Math.random() * 0.5 + 0.1 // Varied star sizes
     }
     
     starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
+    starGeometry.setAttribute('size', new THREE.BufferAttribute(starSizes, 1))
     
     const starMaterial = new THREE.PointsMaterial({
       color: 0xbdbdbd,
-      size: 0.3,
+      sizeAttenuation: true,
       transparent: true,
-      opacity: 0.8
+      opacity: 0.8,
+      vertexColors: false
     })
     
     const stars = new THREE.Points(starGeometry, starMaterial)
@@ -158,11 +186,11 @@ export function SolarSystem() {
       })
 
       // Make stars twinkle
-      const starPositions = starGeometry.attributes.position.array as Float32Array
+      const starSizes = starGeometry.attributes.size.array as Float32Array
       for (let i = 0; i < starCount; i++) {
-        starPositions[i * 3 + 1] += Math.sin(elapsedTime + i) * 0.01
+        starSizes[i] = (Math.sin(elapsedTime + i) * 0.2 + 0.8) * (Math.random() * 0.3 + 0.2)
       }
-      starGeometry.attributes.position.needsUpdate = true
+      starGeometry.attributes.size.needsUpdate = true
 
       renderer.render(scene, camera)
     }
