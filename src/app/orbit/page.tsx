@@ -1,8 +1,8 @@
 import { Navigation } from '@/components/navigation'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Footer } from '@/components/footer'
+import { SolarSystem } from '@/components/solar-system'
 
 export default function OrbitPage() {
   return (
@@ -30,24 +30,7 @@ export default function OrbitPage() {
                 </Link>
               </div>
               <div className="md:w-1/3">
-                <div className="relative w-full aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center shadow-lg">
-                  <div className="absolute inset-4 rounded-xl bg-white p-4 flex items-center justify-center rotate-6 shadow-md">
-                    <div className="bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center transform scale-150">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
-                        <path d="M12 2v2"></path>
-                        <path d="M12 20v2"></path>
-                        <path d="m4.93 4.93 1.41 1.41"></path>
-                        <path d="m17.66 17.66 1.41 1.41"></path>
-                        <path d="M2 12h2"></path>
-                        <path d="M20 12h2"></path>
-                        <path d="m6.34 17.66-1.41 1.41"></path>
-                        <path d="m19.07 4.93-1.41 1.41"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-100 rounded-full opacity-50"></div>
-                </div>
+                <SolarSystem />
               </div>
             </div>
 

@@ -1,8 +1,8 @@
 import { Navigation } from '@/components/navigation'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Footer } from '@/components/footer'
+import { RocketLaunch } from '@/components/rocket-launch'
 
 export default function LaunchFundPage() {
   return (
@@ -30,17 +30,7 @@ export default function LaunchFundPage() {
                 </Link>
               </div>
               <div className="md:w-1/3">
-                <div className="relative w-full aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center shadow-lg">
-                  <div className="absolute inset-4 rounded-xl bg-white p-4 flex items-center justify-center -rotate-6 shadow-md">
-                    <div className="bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center transform scale-150">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gray-100 rounded-full opacity-50"></div>
-                </div>
+                <RocketLaunch />
               </div>
             </div>
 
