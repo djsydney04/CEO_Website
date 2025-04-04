@@ -27,64 +27,60 @@ export default function OrbitPage() {
                 </h1>
                 <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                 <div className="max-w-2xl">
-                  <h2 className="text-2xl text-[#545454] mb-5">
-                    Your Launchpad for Real Startup Growth
-                  </h2>
-                  <p className="text-lg text-[#545454]/80 mb-10">
-                    For students who are actively building startups and ready to take their venture to the next level through mentorship, resources, and community.
+                  <p className="text-xl text-[#545454]/90 mb-8">
+                    Orbit is Chapman's premier startup accelerator program. We provide funding, mentorship, and resources to help you take your startup to the next level.
                   </p>
+                  <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-[#545454] hover:bg-[#444444] text-white px-12 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                      Apply to Orbit
+                    </Button>
+                  </a>
                 </div>
-                <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-[#545454] hover:bg-[#444444] text-white px-12 py-3 rounded-xl shadow-sm hover:shadow-md transition-all relative group overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#545454]/0 via-white/10 to-[#545454]/0 group-hover:animate-shimmer"></div>
-                    Apply to Orbit
-                  </Button>
-                </a>
               </ScrollAnimation>
             </div>
 
             {/* Main Intro */}
-            <div className="mb-24">
+            <div className="mb-32">
               <ScrollAnimation type="fade">
-                <p className="text-xl text-[#545454]/90 mb-6">
-                  Chapman Orbit is our founder-focused cohort, designed for those who are already doing something real with their idea. 
-                  If you're tinkering away at a prototype, rallying potential users, or even looking at early funding, Orbit is your home base.
-                </p>
-                <p className="text-lg text-[#545454]/80">
-                  This isn't about theorizing—it's about building, testing, and iterating until you find what works. With Orbit, you'll join a community of like-minded founders all sharing the same journey.
-                </p>
+                <div className="max-w-3xl">
+                  <p className="text-xl text-[#545454]/90 mb-6">
+                    Chapman Orbit is our founder-focused cohort, designed for those who are already doing something real with their idea. 
+                    If you're tinkering away at a prototype, rallying potential users, or even looking at early funding, Orbit is your home base.
+                  </p>
+                  <p className="text-lg text-[#545454]/80">
+                    This isn't about theorizing—it's about building, testing, and iterating until you find what works. With Orbit, you'll join a community of like-minded founders all sharing the same journey.
+                  </p>
+                </div>
               </ScrollAnimation>
             </div>
 
             {/* Program Features */}
-            <div className="mb-24">
-              <ScrollAnimation type="fade" className="mb-10">
-                <h2 className="text-3xl font-bold text-[#545454] mb-5">What Makes Orbit Different</h2>
-                <p className="text-lg text-[#545454]/80 mb-12">Our approach is designed to accelerate your startup's growth</p>
+            <div className="mb-32">
+              <ScrollAnimation type="fade">
+                <div className="max-w-xl mb-12">
+                  <h2 className="text-3xl font-bold text-[#545454] mb-4">What Makes Orbit Different</h2>
+                  <p className="text-lg text-[#545454]/80">Our approach is designed to accelerate your startup's growth</p>
+                </div>
               
                 <div className="grid md:grid-cols-3 gap-12">
                   <div className="space-y-5">
-                    <div className="mb-4 relative">
-                      <div className="absolute inset-0 bg-[#545454]/5 rounded-full blur-xl animate-pulse-slow"></div>
-                      <div className="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
-                          <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-                          <path d="M12 2v2"></path>
-                          <path d="M12 22v-2"></path>
-                          <path d="m17 20.66-1-1.73"></path>
-                          <path d="M11 10.27 7 3.34"></path>
-                          <path d="m20.66 17-1.73-1"></path>
-                          <path d="m3.34 7 1.73 1"></path>
-                          <path d="M22 12h-2"></path>
-                          <path d="M2 12h2"></path>
-                          <path d="m20.66 7-1.73 1"></path>
-                          <path d="m3.34 17 1.73-1"></path>
-                          <path d="m17 3.34-1 1.73"></path>
-                          <path d="m7 20.66 1-1.73"></path>
-                        </svg>
-                        <div className="absolute inset-0 border-2 border-[#545454]/20 rounded-full animate-spin-slow"></div>
-                      </div>
+                    <div className="mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                        <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 22v-2"></path>
+                        <path d="m17 20.66-1-1.73"></path>
+                        <path d="M11 10.27 7 3.34"></path>
+                        <path d="m20.66 17-1.73-1"></path>
+                        <path d="m3.34 7 1.73 1"></path>
+                        <path d="M22 12h-2"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="m20.66 7-1.73 1"></path>
+                        <path d="m3.34 17 1.73-1"></path>
+                        <path d="m17 3.34-1 1.73"></path>
+                        <path d="m7 20.66 1-1.73"></path>
+                      </svg>
                     </div>
                     <h3 className="text-xl font-semibold text-[#545454]">Real-World Product Development</h3>
                     <p className="text-[#545454]/80">
@@ -126,13 +122,15 @@ export default function OrbitPage() {
               </ScrollAnimation>
             </div>
 
-            {/* Who Should Apply - Simple layered design */}
-            <div className="mb-24">
+            {/* Who Should Apply */}
+            <div className="mb-32">
               <ScrollAnimation type="fade">
-                <h2 className="text-3xl font-bold text-[#545454] mb-5">Who Should Apply</h2>
-                <p className="text-lg text-[#545454]/80 mb-10">
-                  We're looking for students at various stages of the startup journey
-                </p>
+                <div className="max-w-xl mb-12">
+                  <h2 className="text-3xl font-bold text-[#545454] mb-4">Who Should Apply</h2>
+                  <p className="text-lg text-[#545454]/80">
+                    We're looking for students at various stages of the startup journey
+                  </p>
+                </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="space-y-4">
@@ -195,17 +193,19 @@ export default function OrbitPage() {
               </ScrollAnimation>
             </div>
 
-            {/* How Orbit Works - Clean, modern steps layout */}
-            <section className="mb-24">
+            {/* How Orbit Works */}
+            <section className="mb-32">
               <ScrollAnimation type="fade">
-                <h2 className="text-3xl font-bold text-[#545454] mb-5">How Orbit Works</h2>
-                <p className="text-lg text-[#545454]/80 mb-12">
-                  Our founder-focused program follows a proven path to help you build and launch your startup
-                </p>
+                <div className="max-w-xl mb-12">
+                  <h2 className="text-3xl font-bold text-[#545454] mb-4">How Orbit Works</h2>
+                  <p className="text-lg text-[#545454]/80">
+                    Our founder-focused program follows a proven path to help you build and launch your startup
+                  </p>
+                </div>
                 
-                <div className="space-y-16">
+                <div className="space-y-20">
                   <div className="relative">
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center mb-6">
                       <div className="w-10 h-10 bg-[#545454] rounded-full flex items-center justify-center text-white font-semibold mr-4">1</div>
                       <h3 className="text-2xl font-semibold text-[#545454]">Application & Selection</h3>
                     </div>
@@ -215,11 +215,11 @@ export default function OrbitPage() {
                   </div>
                   
                   <div className="relative">
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center mb-6">
                       <div className="w-10 h-10 bg-[#545454] rounded-full flex items-center justify-center text-white font-semibold mr-4">2</div>
                       <h3 className="text-2xl font-semibold text-[#545454]">Weekly Founder Sessions</h3>
                     </div>
-                    <p className="text-lg text-[#545454]/80 ml-14 mb-8">
+                    <p className="text-lg text-[#545454]/80 ml-14 mb-12">
                       Join intensive workshops, get 1-on-1 mentorship, and collaborate with fellow founders to overcome challenges and accelerate growth.
                     </p>
                     
@@ -280,15 +280,15 @@ export default function OrbitPage() {
                     </div>
 
                     {/* Guest Speakers Section */}
-                    <div className="ml-14 mt-12">
+                    <div className="ml-14 mt-16">
                       <h4 className="text-2xl font-semibold text-[#545454] mb-8">Guest Speakers & Industry Experts</h4>
-                      <div className="grid md:grid-cols-2 gap-6">
+                      <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                           <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
                           <div className="relative">
-                            <h5 className="text-xl font-semibold text-[#545454] mb-3">Founder Stories</h5>
-                            <p className="text-[#545454]/70 text-sm mb-6">Learn directly from successful entrepreneurs who've been in your shoes</p>
-                            <div className="space-y-4 mt-auto">
+                            <h5 className="text-xl font-semibold text-[#545454] mb-4">Founder Stories</h5>
+                            <p className="text-[#545454]/80 mb-8">Learn directly from successful entrepreneurs who've been in your shoes</p>
+                            <div className="space-y-4">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
                                 <span className="text-[#545454]/80">Real startup journeys and pivotal moments</span>
@@ -308,9 +308,9 @@ export default function OrbitPage() {
                         <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                           <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
                           <div className="relative">
-                            <h5 className="text-xl font-semibold text-[#545454] mb-3">Industry Insights</h5>
-                            <p className="text-[#545454]/70 text-sm mb-6">Deep dives into market trends and technical expertise</p>
-                            <div className="space-y-4 mt-auto">
+                            <h5 className="text-xl font-semibold text-[#545454] mb-4">Industry Insights</h5>
+                            <p className="text-[#545454]/80 mb-8">Deep dives into market trends and technical expertise</p>
+                            <div className="space-y-4">
                               <div className="flex items-start">
                                 <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
                                 <span className="text-[#545454]/80">Market analysis and opportunity mapping</span>
@@ -327,7 +327,7 @@ export default function OrbitPage() {
                   </div>
                   
                   <div className="relative">
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center mb-6">
                       <div className="w-10 h-10 bg-[#545454] rounded-full flex items-center justify-center text-white font-semibold mr-4">3</div>
                       <h3 className="text-2xl font-semibold text-[#545454]">Demo Days</h3>
                     </div>
@@ -340,7 +340,7 @@ export default function OrbitPage() {
             </section>
 
             {/* Apply Section */}
-            <div className="mb-20">
+            <div className="mb-12">
               <ApplySection />
             </div>
           </div>

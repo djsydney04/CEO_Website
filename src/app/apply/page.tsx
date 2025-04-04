@@ -1,186 +1,149 @@
 'use client'
 
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { Navigation } from '@/components/navigation'
+import { Footer } from '@/components/footer'
+import { Button } from '@/components/ui/button'
+import { ScrollAnimation } from '@/components/scroll-animation'
 
 export default function ApplyPage() {
   return (
-    <div className="min-h-screen bg-white text-[#545454]">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
-      <div className="pt-20 min-h-screen">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12 pt-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Choose Your Path</h1>
-            <p className="text-lg text-gray-600">
-              Select which program you'd like to apply for based on your interests and goals
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-0 relative">
-            {/* Vertical divider */}
-            <div className="hidden md:block absolute top-10 bottom-10 left-1/2 w-px bg-gray-200"></div>
-            
-            {/* Orbit Side */}
-            <div className="p-8 md:pr-12 space-y-6 flex flex-col">
-              <div className="flex-1 space-y-6">
-                <div className="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
-                    <path d="M12 2v2"></path>
-                    <path d="M12 20v2"></path>
-                    <path d="m4.93 4.93 1.41 1.41"></path>
-                    <path d="m17.66 17.66 1.41 1.41"></path>
-                    <path d="M2 12h2"></path>
-                    <path d="M20 12h2"></path>
-                    <path d="m6.34 17.66-1.41 1.41"></path>
-                    <path d="m19.07 4.93-1.41 1.41"></path>
-                  </svg>
+      <div className="pt-28 pb-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            {/* Hero Section */}
+            <div className="mb-24">
+              <ScrollAnimation type="fade">
+                <div className="inline-block mb-4">
+                  <span className="text-[#545454] text-sm font-medium">Application Portal</span>
                 </div>
-                
-                <h2 className="text-3xl font-bold">Chapman Orbit</h2>
-                <p className="text-gray-600 text-lg">For students actively building startups</p>
-                
-                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                  <h3 className="text-xl font-semibold mb-4">Who Should Apply?</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Students with an existing startup idea or prototype
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Entrepreneurs looking for mentorship and resources
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Technical or business-minded founders ready to build
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Students committed to making real progress on their ventures
-                    </li>
-                  </ul>
+                <h1 className="text-6xl font-bold text-[#545454] mb-6 leading-tight tracking-tight">
+                  Join Chapman CEO
+                </h1>
+                <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
+                <div className="max-w-2xl">
+                  <p className="text-xl text-[#545454]/90 mb-8">
+                    Choose your path to entrepreneurship. Whether you're ready to apply for Orbit or interested in the Launch Fund, we're here to support your journey.
+                  </p>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">What You'll Gain:</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Mentorship</div>
-                      <div className="text-sm text-gray-500">Connect with experienced founders</div>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Resources</div>
-                      <div className="text-sm text-gray-500">Tools to accelerate your startup</div>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Network</div>
-                      <div className="text-sm text-gray-500">Invaluable connections</div>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Funding Help</div>
-                      <div className="text-sm text-gray-500">Pitch development and guidance</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="pt-6">
-                <Link href="https://forms.gle/iBmW3Tv3bUJRK1Vr8" target="_blank">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white py-6 text-lg">
-                    Apply to Orbit
-                  </Button>
-                </Link>
-              </div>
+              </ScrollAnimation>
             </div>
-            
-            {/* Launch Fund Side */}
-            <div className="p-8 md:pl-12 space-y-6 flex flex-col">
-              <div className="flex-1 space-y-6">
-                <div className="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                  </svg>
+
+            {/* Application Options */}
+            <div className="grid md:grid-cols-2 gap-12 mb-32">
+              {/* Orbit Application */}
+              <ScrollAnimation type="fade">
+                <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
+                  <div className="relative">
+                    <h2 className="text-2xl font-bold text-[#545454] mb-4">Apply to Orbit</h2>
+                    <p className="text-[#545454]/80 mb-6">
+                      For founders who are actively building and ready to take their startup to the next level through mentorship, resources, and community.
+                    </p>
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Weekly founder sessions and workshops</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">One-on-one mentorship</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Access to founder network</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Demo Day presentation opportunity</span>
+                      </div>
+                    </div>
+                    <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        Apply Now
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-                
-                <h2 className="text-3xl font-bold">The Launch Fund</h2>
-                <p className="text-gray-600 text-lg">For aspiring VCs & finance-minded entrepreneurs</p>
-                
-                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                  <h3 className="text-xl font-semibold mb-4">Who Should Apply?</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Students interested in venture capital and investing
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Finance and business majors looking for real experience
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Those who want to learn startup evaluation and due diligence
-                    </li>
-                    <li className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-green-500 flex-shrink-0 mt-1">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                      Students eager to build connections in the investment world
-                    </li>
-                  </ul>
+              </ScrollAnimation>
+
+              {/* Launch Fund Interest */}
+              <ScrollAnimation type="fade">
+                <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
+                  <div className="relative">
+                    <h2 className="text-2xl font-bold text-[#545454] mb-4">Express Interest in Launch Fund</h2>
+                    <p className="text-[#545454]/80 mb-6">
+                      Opening next semester. Get early access and be notified when applications open for Chapman's student-run venture fund.
+                    </p>
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Funding for student ventures</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Expert pitch feedback</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Investment readiness support</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Early application access</span>
+                      </div>
+                    </div>
+                    <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        Express Interest
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">What You'll Gain:</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">VC Knowledge</div>
-                      <div className="text-sm text-gray-500">Real-world investing skills</div>
+              </ScrollAnimation>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mb-32">
+              <ScrollAnimation type="fade">
+                <div className="max-w-xl">
+                  <h2 className="text-3xl font-bold text-[#545454] mb-4">What Happens Next</h2>
+                  <p className="text-lg text-[#545454]/80 mb-8">
+                    After you submit your application or express interest, here's what you can expect:
+                  </p>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-[#545454] rounded-full flex items-center justify-center text-white font-medium mr-4 flex-shrink-0">1</div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#545454] mb-2">Confirmation</h3>
+                        <p className="text-[#545454]/80">You'll receive an immediate confirmation of your submission.</p>
+                      </div>
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Due Diligence</div>
-                      <div className="text-sm text-gray-500">Learn to evaluate startups</div>
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-[#545454] rounded-full flex items-center justify-center text-white font-medium mr-4 flex-shrink-0">2</div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#545454] mb-2">Review Process</h3>
+                        <p className="text-[#545454]/80">Our team will review your submission within 5 business days.</p>
+                      </div>
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Industry Insights</div>
-                      <div className="text-sm text-gray-500">From seasoned investors</div>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <div className="font-medium">Network</div>
-                      <div className="text-sm text-gray-500">Connect with the VC ecosystem</div>
+                    <div className="flex items-start">
+                      <div className="w-8 h-8 bg-[#545454] rounded-full flex items-center justify-center text-white font-medium mr-4 flex-shrink-0">3</div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-[#545454] mb-2">Next Steps</h3>
+                        <p className="text-[#545454]/80">We'll reach out to schedule a conversation or provide additional information about upcoming opportunities.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="pt-6">
-                <Link href="https://forms.gle/iBmW3Tv3bUJRK1Vr8" target="_blank">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white py-6 text-lg">
-                    Apply to Launch Fund
-                  </Button>
-                </Link>
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 } 

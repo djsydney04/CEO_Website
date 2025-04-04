@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="mt-28 pt-20 pb-10 bg-gray-900 text-white w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-      <div className="container mx-auto px-4">
+    <footer className="bg-white border-t border-gray-100">
+      <div className="container mx-auto px-6 py-8">
         <div className="grid md:grid-cols-4 gap-12">
           <div>
             <h4 className="text-lg font-bold mb-4">Chapman CEO</h4>

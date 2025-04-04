@@ -11,7 +11,7 @@ export default function LaunchFundPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <div className="pt-28 pb-24">
+      <div className="pt-28 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             {/* Hero Section - Clean Apple-inspired design */}
@@ -124,11 +124,11 @@ export default function LaunchFundPage() {
             </div>
             
             {/* Interest Button Section */}
-            <div className="border-t border-gray-100 pt-16 mb-20">
+            <div className="border-t border-gray-100 pt-16">
               <ScrollAnimation type="fade">
-                <div className="mb-16 text-center">
+                <div className="text-center">
                   <h2 className="text-3xl font-bold text-[#545454] mb-3">Express Interest</h2>
-                  <p className="text-lg text-[#545454]/80 max-w-xl mx-auto mb-10">
+                  <p className="text-lg text-[#545454]/80 max-w-xl mx-auto mb-8">
                     The Launch Fund will be accepting applications next semester. Express your interest now to be notified when applications open.
                   </p>
                   
