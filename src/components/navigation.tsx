@@ -15,7 +15,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center">
         <Link href="/" className="flex items-center">
           <Image 

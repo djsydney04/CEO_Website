@@ -34,40 +34,62 @@ export function SolarSystem() {
     window.addEventListener('resize', updateSize)
 
     // Create sun
-    const sunGeometry = new THREE.IcosahedronGeometry(2, 5) // Higher detail level
+    const sunGeometry = new THREE.IcosahedronGeometry(2, 5)
     const sunMaterial = new THREE.MeshStandardMaterial({ 
       color: 0x545454,
-      roughness: 0.4,
-      metalness: 0.7,
+      roughness: 0.2,
+      metalness: 0.9,
       emissive: 0x333333,
-      emissiveIntensity: 0.6,
-      flatShading: false
+      emissiveIntensity: 0.8,
+      flatShading: true
     })
     const sun = new THREE.Mesh(sunGeometry, sunMaterial)
     scene.add(sun)
 
-    // Sun glow effect - more subtle
-    const sunGlowGeometry = new THREE.SphereGeometry(2.2, 36, 36)
+    // Enhanced sun glow effect
+    const sunGlowGeometry = new THREE.SphereGeometry(2.4, 36, 36)
     const sunGlowMaterial = new THREE.MeshBasicMaterial({
       color: 0x444444,
       transparent: true,
-      opacity: 0.3,
-      side: THREE.BackSide
+      opacity: 0.2,
+      side: THREE.BackSide,
+      blending: THREE.AdditiveBlending
     })
     const sunGlow = new THREE.Mesh(sunGlowGeometry, sunGlowMaterial)
     scene.add(sunGlow)
 
-    // Add ambient light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7)
+    // Add dynamic sun rays
+    const rayCount = 8
+    const rayGeometry = new THREE.BoxGeometry(0.1, 4, 0.1)
+    const rayMaterial = new THREE.MeshBasicMaterial({
+      color: 0x444444,
+      transparent: true,
+      opacity: 0.3,
+      blending: THREE.AdditiveBlending
+    })
+    
+    const rays: THREE.Mesh[] = []
+    for (let i = 0; i < rayCount; i++) {
+      const ray = new THREE.Mesh(rayGeometry, rayMaterial)
+      const angle = (i / rayCount) * Math.PI * 2
+      ray.position.x = Math.cos(angle) * 3
+      ray.position.z = Math.sin(angle) * 3
+      ray.rotation.y = -angle
+      rays.push(ray)
+      scene.add(ray)
+    }
+
+    // Add ambient light with more intensity
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.9)
     scene.add(ambientLight)
     
-    // Add directional light
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5)
+    // Enhanced directional light
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 2)
     directionalLight.position.set(5, 5, 5)
     scene.add(directionalLight)
 
-    // Add point light at sun
-    const sunLight = new THREE.PointLight(0xffffff, 1, 25)
+    // Add point light at sun with more intensity and larger range
+    const sunLight = new THREE.PointLight(0xffffff, 1.5, 30)
     sunLight.position.set(0, 0, 0)
     scene.add(sunLight)
 
@@ -218,68 +240,67 @@ export function SolarSystem() {
       
       const elapsedTime = (Date.now() - startTime) / 1000
       
-      // More dynamic sun rotation
-      sun.rotation.y += 0.003
-      sun.rotation.x = Math.sin(elapsedTime * 0.2) * 0.05
+      // More dynamic sun rotation and pulsing
+      sun.rotation.y += 0.005
+      sun.rotation.x = Math.sin(elapsedTime * 0.3) * 0.1
+      sun.scale.setScalar(1 + Math.sin(elapsedTime * 0.8) * 0.05)
       
-      // Rotate sun glow in opposite direction with subtle pulsing
-      sunGlow.rotation.y -= 0.002
-      sunGlow.rotation.z += 0.001
-      sunGlow.scale.set(
-        1 + Math.sin(elapsedTime * 0.5) * 0.03,
-        1 + Math.sin(elapsedTime * 0.5) * 0.03,
-        1 + Math.sin(elapsedTime * 0.5) * 0.03
-      )
+      // Rotate sun rays
+      rays.forEach((ray, i) => {
+        const angle = (i / rayCount) * Math.PI * 2 + elapsedTime * 0.2
+        ray.position.x = Math.cos(angle) * 3
+        ray.position.z = Math.sin(angle) * 3
+        ray.rotation.y = -angle
+        ray.scale.y = 1 + Math.sin(elapsedTime * 2 + i) * 0.2
+      })
       
-      // Move camera in a gentle orbit
+      // Enhanced sun glow animation
+      sunGlow.rotation.y -= 0.003
+      sunGlow.rotation.z += 0.002
+      sunGlow.scale.setScalar(1 + Math.sin(elapsedTime * 0.5) * 0.1)
+      
+      // Smoother camera movement
       const cameraRadius = 15
-      const cameraSpeed = 0.08
+      const cameraSpeed = 0.05
       camera.position.x = Math.sin(elapsedTime * cameraSpeed) * cameraRadius
       camera.position.z = Math.cos(elapsedTime * cameraSpeed) * cameraRadius
-      camera.position.y = 5 + Math.sin(elapsedTime * 0.15) * 2
+      camera.position.y = 5 + Math.sin(elapsedTime * 0.2) * 3
       camera.lookAt(0, 0, 0)
 
-      // Rotate and orbit planets with more natural motion
+      // Enhanced planet animation
       planets.forEach((planet, index) => {
         const orbitRadius = 3 + (index * 2.5)
-        const speed = 0.002 / (index * 0.3 + 1)
-        const time = elapsedTime * speed * 10
+        const speed = 0.15 / (index + 2)
+        const time = elapsedTime * speed
         
-        // Orbital movement
+        // Orbital movement with vertical oscillation
         planet.position.x = Math.cos(time) * orbitRadius
         planet.position.z = Math.sin(time) * orbitRadius
+        planet.position.y = Math.sin(time * 2) * 0.8
         
-        // Add some vertical movement
-        planet.position.y = Math.sin(time * 2) * 0.5
+        // Planet rotation
+        planet.rotation.y += 0.01 + index * 0.002
+        planet.rotation.x = Math.sin(elapsedTime * 0.2 + index) * 0.1
         
-        // More natural planet rotation with varying speeds
-        planet.rotation.y += 0.007 + index * 0.002
-        planet.rotation.x = Math.sin(elapsedTime * 0.1 + index) * 0.05
-        
-        // If the planet has a ring (last planet), rotate it differently
-        if (index === 3 && planet.children.length > 0) {
-          const ring = planet.children[planet.children.length > 1 ? 1 : 0]
-          ring.rotation.z += 0.001
-        }
-        
-        // If the planet has a moon, rotate it
+        // Enhanced moon movement
         if (planet.children.length > 0) {
           const moon = planet.children[0] as THREE.Mesh
           if (moon.geometry instanceof THREE.IcosahedronGeometry) {
-            const moonSpeed = 0.05
-            const moonTime = elapsedTime * moonSpeed * 5
-            
-            moon.position.x = Math.cos(moonTime) * 1
-            moon.position.z = Math.sin(moonTime) * 1
-            moon.rotation.y += 0.03
+            const moonSpeed = 0.8
+            const moonTime = elapsedTime * moonSpeed
+            moon.position.x = Math.cos(moonTime) * 1.2
+            moon.position.z = Math.sin(moonTime) * 1.2
+            moon.position.y = Math.sin(moonTime * 2) * 0.3
+            moon.rotation.y += 0.05
           }
         }
       })
 
-      // Make stars twinkle by changing their size
+      // Enhanced star twinkling
       const starSizes = starGeometry.attributes.size.array as Float32Array
       for (let i = 0; i < starCount; i++) {
-        starSizes[i] = (Math.sin(elapsedTime * 2 + i * 8.24) * 0.3 + 0.7) * (Math.random() * 0.3 + 0.2)
+        const twinkle = Math.sin(elapsedTime * 3 + i * 8.24) * 0.5 + 0.5
+        starSizes[i] = (Math.random() * 0.3 + 0.2) * twinkle
       }
       starGeometry.attributes.size.needsUpdate = true
 
