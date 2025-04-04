@@ -43,6 +43,7 @@ export default function OrbitPage() {
             <div className="mb-32">
               <ScrollAnimation type="fade">
                 <div className="max-w-3xl">
+                  <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                   <p className="text-xl text-[#545454]/90 mb-6">
                     Chapman Orbit is our founder-focused cohort, designed for those who are already doing something real with their idea. 
                     If you're tinkering away at a prototype, rallying potential users, or even looking at early funding, Orbit is your home base.
