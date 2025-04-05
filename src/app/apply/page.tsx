@@ -32,7 +32,7 @@ export default function ApplyPage() {
             </div>
 
             {/* Application Options */}
-            <div className="grid md:grid-cols-2 gap-12 mb-32">
+            <div className="grid md:grid-cols-3 gap-8 mb-32">
               {/* Orbit Application */}
               <ScrollAnimation type="fade">
                 <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
@@ -61,7 +61,7 @@ export default function ApplyPage() {
                       </div>
                     </div>
                     <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                      <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
                         Apply Now
                       </Button>
                     </a>
@@ -99,6 +99,34 @@ export default function ApplyPage() {
                     <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer">
                       <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
                         Express Interest
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </ScrollAnimation>
+
+              {/* General Member */}
+              <ScrollAnimation type="fade">
+                <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
+                  <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
+                  <div className="relative">
+                    <h2 className="text-2xl font-bold text-[#545454] mb-4">Join as General Member</h2>
+                    <p className="text-[#545454]/80 mb-6">
+                      For students who want to stay close to the action. A great entry point if you're still exploring or want to learn from the sidelines before jumping in.
+                    </p>
+                    <div className="space-y-4 mb-8">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Access to select speaker events</span>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                        <span className="text-[#545454]/80">Join panel discussions</span>
+                      </div>
+                    </div>
+                    <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        Join Now
                       </Button>
                     </a>
                   </div>

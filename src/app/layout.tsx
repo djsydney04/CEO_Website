@@ -6,8 +6,30 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Chapman Entrepreneurship Organization",
-  description: "Chapman Entrepreneurs building the future through fearless execution, rapid iteration, and relentless problem-solving.",
+  title: "Chapman CEO",
+  description: "Chapman Entrepreneurs Organization - Building the next generation of founders and innovators.",
+  icons: {
+    icon: '/SymbolLogo.png',
+    apple: '/SymbolLogo.png',
+  },
+  openGraph: {
+    title: 'Chapman CEO',
+    description: 'Chapman Entrepreneurs Organization - Building the next generation of founders and innovators.',
+    images: [
+      {
+        url: '/SymbolLogo.png',
+        width: 800,
+        height: 800,
+        alt: 'Chapman CEO Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chapman CEO',
+    description: 'Chapman Entrepreneurs Organization - Building the next generation of founders and innovators.',
+    images: ['/SymbolLogo.png'],
+  },
 }
 
 export default function RootLayout({

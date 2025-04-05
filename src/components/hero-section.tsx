@@ -51,13 +51,13 @@ export default function HeroSection() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <ScrollAnimation type="fade" className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#545454] mb-6">Our Two Tracks</h2>
+            <h2 className="text-3xl font-bold text-[#545454] mb-6">Our Programs</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Whether you're a founder building the next big thing or an aspiring investor looking to fund tomorrow's innovations, we have a program designed for you. Our Orbit and Launch Fund tracks offer hands-on experience, expert mentorship, and real-world opportunities to put your skills into practice.
+              Whether you're a founder building the next big thing, an aspiring investor, or just want to stay connected with the entrepreneurial community, we have a program designed for you.
             </p>
           </ScrollAnimation>
           
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-3 gap-10">
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all h-full flex flex-col">
               <div className="flex items-center mb-4">
                 <div className="bg-gray-50 p-3 rounded-xl mr-4">
@@ -85,15 +85,15 @@ export default function HeroSection() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Weekly workshops and peer feedback sessions to iterate on your product</span>
+                  <span className="text-gray-600">Weekly workshops and peer feedback sessions</span>
                 </div>
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Access to mentors with experience in your industry</span>
+                  <span className="text-gray-600">Access to industry mentors</span>
                 </div>
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Opportunity to showcase to investors at Demo Days</span>
+                  <span className="text-gray-600">Demo Day opportunities</span>
                 </div>
               </div>
               
@@ -104,7 +104,7 @@ export default function HeroSection() {
                       Learn More
                     </Button>
                   </Link>
-                  <a href="https://www.notion.so/1ca3b389b4ca80538086ce34809da29b?pvs=106" target="_blank" rel="noopener noreferrer">
+                  <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-[#545454] hover:bg-[#444444] text-white">
                       Apply Now
                     </Button>
@@ -129,15 +129,15 @@ export default function HeroSection() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Interactive sessions with experienced venture capitalists</span>
+                  <span className="text-gray-600">VC mentorship sessions</span>
                 </div>
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Hands-on practice evaluating real startups and deals</span>
+                  <span className="text-gray-600">Startup evaluation practice</span>
                 </div>
                 <div className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Build connections with the investment community</span>
+                  <span className="text-gray-600">Investment community access</span>
                 </div>
               </div>
               
@@ -153,6 +153,42 @@ export default function HeroSection() {
                       Express Interest
                     </Button>
                   </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all h-full flex flex-col">
+              <div className="flex items-center mb-4">
+                <div className="bg-gray-50 p-3 rounded-xl mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#545454]">General Member</h3>
+              </div>
+              <p className="text-gray-600 mb-6">For students who want to stay close to the action and learn from the entrepreneurial community without the full program commitment.</p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
+                  <span className="text-gray-600">Access to speaker events</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
+                  <span className="text-gray-600">Join panel discussions</span>
+                </div>
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex gap-4">
+                  <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20">
+                      Join Now
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

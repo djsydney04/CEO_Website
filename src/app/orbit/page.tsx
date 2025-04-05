@@ -194,6 +194,102 @@ export default function OrbitPage() {
               </ScrollAnimation>
             </div>
 
+            {/* Membership Tracks */}
+            <div className="mb-32">
+              <ScrollAnimation type="fade">
+                <div className="max-w-xl mb-12">
+                  <h2 className="text-3xl font-bold text-[#545454] mb-4">Membership Tracks</h2>
+                  <p className="text-lg text-[#545454]/80">
+                    Choose the path that best fits your entrepreneurial journey
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all">
+                    <div className="flex items-center mb-6">
+                      <svg className="mr-4 text-[#545454] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                        <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 22v-2"></path>
+                        <path d="m17 20.66-1-1.73"></path>
+                        <path d="M11 10.27 7 3.34"></path>
+                      </svg>
+                      <h3 className="text-xl font-semibold text-[#545454]">Founders Track</h3>
+                    </div>
+                    <p className="text-[#545454]/80 mb-6">
+                      For active founders building real solutions. Get hands-on mentorship, funding opportunities, and structured support to take your startup to the next level.
+                    </p>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Weekly founder sessions
+                      </li>
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        1-on-1 mentorship
+                      </li>
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Funding opportunities
+                      </li>
+                    </ul>
+                    <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-[#545454] hover:bg-[#444444] text-white px-8 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all w-full">
+                        Apply to Founders Track
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all">
+                    <div className="flex items-center mb-6">
+                      <svg className="mr-4 text-[#545454] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <h3 className="text-xl font-semibold text-[#545454]">General Member</h3>
+                    </div>
+                    <p className="text-[#545454]/80 mb-6">
+                      For students who want to stay close to the action. As a general member, you'll be invited to select speaker events, panels, and socials—but you won't participate in the hands-on Orbit or Launch programs.
+                    </p>
+                    <ul className="space-y-3 mb-8">
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Access to speaker events
+                      </li>
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Networking opportunities
+                      </li>
+                      <li className="flex items-center text-[#545454]/80">
+                        <svg className="mr-3 text-[#545454]/60" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Community socials
+                      </li>
+                    </ul>
+                    <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 px-8 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all w-full">
+                        Join as General Member
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </ScrollAnimation>
+            </div>
+
             {/* How Orbit Works */}
             <section className="mb-32">
               <ScrollAnimation type="fade">
