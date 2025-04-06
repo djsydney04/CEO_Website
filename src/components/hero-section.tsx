@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </p>
               </div>
               
-              <div className="fixed md:relative bottom-6 md:bottom-0 left-4 right-4 md:left-0 md:right-0 z-10 md:pt-4">
+              <div className="mt-8 md:mt-4">
                 <Link href="/apply" className="block w-full md:w-auto">
                   <Button 
                     className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
@@ -203,7 +203,7 @@ export default function HeroSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Learn by Doing */}
-                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-10 shadow-xl border border-gray-50 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                <div className="bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#545454]/20 text-7xl font-bold mb-8 font-mono">01</div>
                   <h3 className="text-2xl font-semibold text-[#545454] mb-4 tracking-tight">Learn by Doing</h3>
                   <div className="h-[2px] w-16 bg-[#545454]/10 mb-6"></div>
@@ -213,7 +213,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Quality Network */}
-                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-10 shadow-xl border border-gray-50 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                <div className="bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#545454]/20 text-7xl font-bold mb-8 font-mono">02</div>
                   <h3 className="text-2xl font-semibold text-[#545454] mb-4 tracking-tight">Quality Network</h3>
                   <div className="h-[2px] w-16 bg-[#545454]/10 mb-6"></div>
@@ -223,7 +223,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Fast Execution */}
-                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-10 shadow-xl border border-gray-50 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                <div className="bg-white rounded-2xl p-8 md:p-10 shadow-md hover:shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#545454]/20 text-7xl font-bold mb-8 font-mono">03</div>
                   <h3 className="text-2xl font-semibold text-[#545454] mb-4 tracking-tight">Fast Execution</h3>
                   <div className="h-[2px] w-16 bg-[#545454]/10 mb-6"></div>
