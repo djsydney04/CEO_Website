@@ -12,6 +12,7 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/orbit', label: 'Orbit' },
     { href: '/launch-fund', label: 'Launch Fund' },
+    { href: 'https://substack.com/@chapmanentrepreneurshiporg', label: 'Stack', isExternal: true },
   ]
 
   return (
@@ -29,17 +30,29 @@ export function Navigation() {
         
         <div className="flex items-center ml-auto">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-[#545454] relative px-5 ${
-                pathname === item.href 
-                  ? 'text-[#545454] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#545454]' 
-                  : 'text-gray-500'
-              }`}
-            >
-              {item.label}
-            </Link>
+            item.isExternal ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium transition-colors hover:text-[#545454] text-gray-500 px-5"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-medium transition-colors hover:text-[#545454] relative px-5 ${
+                  pathname === item.href 
+                    ? 'text-[#545454] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#545454]' 
+                    : 'text-gray-500'
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
           ))}
           
           <Link href="/apply" className="ml-8">

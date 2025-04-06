@@ -57,9 +57,9 @@ export default function HeroSection() {
             </p>
           </ScrollAnimation>
           
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all h-full flex flex-col">
-              <div className="flex items-center mb-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-6">
                 <div className="bg-gray-50 p-3 rounded-xl mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"></path>
@@ -68,53 +68,43 @@ export default function HeroSection() {
                     <path d="M12 22v-2"></path>
                     <path d="m17 20.66-1-1.73"></path>
                     <path d="M11 10.27 7 3.34"></path>
-                    <path d="m20.66 17-1.73-1"></path>
-                    <path d="m3.34 7 1.73 1"></path>
-                    <path d="M22 12h-2"></path>
-                    <path d="M2 12h2"></path>
-                    <path d="m20.66 7-1.73 1"></path>
-                    <path d="m3.34 17 1.73-1"></path>
-                    <path d="m17 3.34-1 1.73"></path>
-                    <path d="m7 20.66 1-1.73"></path>
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#545454]">Orbit</h3>
               </div>
-              <p className="text-gray-600 mb-6">For students who are actively building startups and want to take their venture to the next level.</p>
-              
-              <div className="space-y-3 mb-6">
+              <p className="text-[#545454]/80 mb-8">
+                For students who are actively building startups and want to take their venture to the next level.
+              </p>
+              <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Weekly workshops and peer feedback sessions</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Weekly workshops and peer feedback sessions</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Access to industry mentors</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Access to industry mentors</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Demo Day opportunities</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Demo Day opportunities</span>
                 </div>
               </div>
-              
-              <div className="mt-auto">
-                <div className="flex gap-4">
-                  <Link href="/orbit">
-                    <Button variant="outline" className="border-[#545454] text-[#545454] hover:bg-[#545454]/5">
-                      Learn More
-                    </Button>
-                  </Link>
-                  <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-[#545454] hover:bg-[#444444] text-white">
-                      Apply Now
-                    </Button>
-                  </a>
-                </div>
+              <div className="mt-auto space-y-3">
+                <Link href="/orbit" className="block">
+                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5">
+                    Learn More
+                  </Button>
+                </Link>
+                <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white">
+                    Apply Now
+                  </Button>
+                </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all h-full flex flex-col">
-              <div className="flex items-center mb-4">
+            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-6">
                 <div className="bg-gray-50 p-3 rounded-xl mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="12" y1="1" x2="12" y2="23"></line>
@@ -122,43 +112,41 @@ export default function HeroSection() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-[#545454]">Launch Fund</h3>
-                <span className="ml-2 px-2 py-0.5 bg-gray-100 text-[#545454]/70 text-xs rounded-full">Coming Soon</span>
+                <span className="ml-2 px-2 py-0.5 bg-gray-100 text-[#545454]/70 text-xs rounded-full whitespace-nowrap">Coming Soon</span>
               </div>
-              <p className="text-gray-600 mb-6">For aspiring venture capitalists and finance-minded students interested in learning how early-stage investing works.</p>
-              
-              <div className="space-y-3 mb-6">
+              <p className="text-[#545454]/80 mb-8">
+                For aspiring venture capitalists and finance-minded students interested in learning how early-stage investing works.
+              </p>
+              <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">VC mentorship sessions</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">VC mentorship sessions</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Startup evaluation practice</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Startup evaluation practice</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Investment community access</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Investment community access</span>
                 </div>
               </div>
-              
-              <div className="mt-auto">
-                <div className="flex gap-4">
-                  <Link href="/launch-fund">
-                    <Button variant="outline" className="border-[#545454] text-[#545454] hover:bg-[#545454]/5">
-                      Learn More
-                    </Button>
-                  </Link>
-                  <Link href="/launch-fund">
-                    <Button className="bg-[#545454] hover:bg-[#444444] text-white">
-                      Express Interest
-                    </Button>
-                  </Link>
-                </div>
+              <div className="mt-auto space-y-3">
+                <Link href="/launch-fund" className="block">
+                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5">
+                    Learn More
+                  </Button>
+                </Link>
+                <Link href="/launch-fund" className="block">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white">
+                    Express Interest
+                  </Button>
+                </Link>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all h-full flex flex-col">
-              <div className="flex items-center mb-4">
+            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-6">
                 <div className="bg-gray-50 p-3 rounded-xl mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -169,27 +157,25 @@ export default function HeroSection() {
                 </div>
                 <h3 className="text-xl font-bold text-[#545454]">General Member</h3>
               </div>
-              <p className="text-gray-600 mb-6">For students who want to stay close to the action and learn from the entrepreneurial community without the full program commitment.</p>
-              
-              <div className="space-y-3 mb-6">
+              <p className="text-[#545454]/80 mb-8">
+                For students who want to stay close to the action. A great entry point if you're still exploring or want to learn from the sidelines before jumping in.
+              </p>
+              <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Access to speaker events</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Access to speaker events</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-[#545454]/60 rounded-full mr-2 mt-2"></span>
-                  <span className="text-gray-600">Join panel discussions</span>
+                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
+                  <span className="text-[#545454]/80">Join panel discussions</span>
                 </div>
               </div>
-              
               <div className="mt-auto">
-                <div className="flex gap-4">
-                  <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20">
-                      Join Now
-                    </Button>
-                  </a>
-                </div>
+                <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20">
+                    Join Now
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
