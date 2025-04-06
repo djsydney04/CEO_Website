@@ -111,7 +111,7 @@ export default function HeroSection() {
                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#545454]">Launch Fund</h3>
+                <h3 className="text-xl font-bold text-[#545454]">Launch Ventures</h3>
                 <span className="ml-2 px-2 py-0.5 bg-gray-100 text-[#545454]/70 text-xs rounded-full whitespace-nowrap">Coming Soon</span>
               </div>
               <p className="text-[#545454]/80 mb-8">

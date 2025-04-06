@@ -16,7 +16,7 @@ export function Footer() {
             <h4 className="text-lg font-bold mb-4">Programs</h4>
             <ul className="space-y-2">
               <li><Link href="/orbit" className="text-gray-400 hover:text-gray-600 text-sm">Chapman Orbit</Link></li>
-              <li><Link href="/launch-fund" className="text-gray-400 hover:text-gray-600 text-sm">Launch Fund</Link></li>
+              <li><Link href="/launch-fund" className="text-gray-400 hover:text-gray-600 text-sm">Launch Ventures</Link></li>
             </ul>
           </div>
 

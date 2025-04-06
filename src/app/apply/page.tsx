@@ -25,7 +25,7 @@ export default function ApplyPage() {
                 <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                 <div className="max-w-2xl">
                   <p className="text-xl text-[#545454]/90 mb-8">
-                    Choose your path to entrepreneurship. Whether you're ready to apply for Orbit or interested in the Launch Fund, we're here to support your journey.
+                    Choose your path to entrepreneurship. Whether you're ready to apply for Orbit or interested in Launch Ventures, we're here to support your journey.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -74,22 +74,22 @@ export default function ApplyPage() {
                 <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                   <div className="absolute inset-0 bg-gradient-to-b from-white via-[#545454]/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
                   <div className="relative">
-                    <h2 className="text-2xl font-bold text-[#545454] mb-4">Express Interest in Launch Fund</h2>
+                    <h2 className="text-2xl font-bold text-[#545454] mb-4">Express Interest in Launch Ventures</h2>
                     <p className="text-[#545454]/80 mb-6">
-                      Opening next semester. Get early access and be notified when applications open for Chapman's student-run venture fund.
+                      Opening next semester. Join our venture capital program to learn about early-stage investing, deal analysis, and startup evaluation.
                     </p>
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Funding for student ventures</span>
+                        <span className="text-[#545454]/80">VC workshops and mentorship</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Expert pitch feedback</span>
+                        <span className="text-[#545454]/80">Deal analysis and evaluation</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Investment readiness support</span>
+                        <span className="text-[#545454]/80">Investment community access</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>

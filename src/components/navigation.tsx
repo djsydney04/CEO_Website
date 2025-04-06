@@ -11,7 +11,7 @@ export function Navigation() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/orbit', label: 'Orbit' },
-    { href: '/launch-fund', label: 'Launch Fund' },
+    { href: '/launch-fund', label: 'Launch Ventures' },
     { href: 'https://substack.com/@chapmanentrepreneurshiporg', label: 'Stack', isExternal: true },
   ]
 
