@@ -234,23 +234,6 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-
-          {/* Partner Universities */}
-          <div className="mt-28 max-w-6xl mx-auto bg-white rounded-3xl p-12 shadow-lg border border-gray-100">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-[#545454] mb-6">Supported By</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                We're proud to collaborate with leading organizations that share our commitment to fostering entrepreneurship
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center items-center gap-16 opacity-70">
-              <div className="h-16 w-32 bg-gray-200 rounded"></div>
-              <div className="h-16 w-32 bg-gray-200 rounded"></div>
-              <div className="h-16 w-32 bg-gray-200 rounded"></div>
-              <div className="h-16 w-32 bg-gray-200 rounded"></div>
-            </div>
-          </div>
         </div>
       </section>
     </div>
