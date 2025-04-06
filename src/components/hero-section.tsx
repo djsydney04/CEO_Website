@@ -14,33 +14,33 @@ export default function HeroSection() {
       <Navigation />
 
       {/* Split Hero Section */}
-      <section className="min-h-[90vh] pt-20">
+      <section className="min-h-[90vh] pt-12 md:pt-20">
         <div className="container mx-auto px-4 h-full">
-          <div className="grid md:grid-cols-2 gap-16 items-center min-h-[80vh]">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
             {/* Text Content */}
-            <ScrollAnimation type="slide-right" className="space-y-10">
+            <ScrollAnimation type="slide-right" className="space-y-6 md:space-y-10">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 md:mb-6 tracking-tight">
                 Chapman Entrepreneurs Organization
               </h1>
-                <p className="text-xl text-gray-600 leading-relaxed mt-6">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-4 md:mt-6">
                   We believe in fearless execution, rapid iteration, and relentless problem-solving.
                 </p>
               </div>
               
-              <div className="pt-4">
-                <Link href="/apply">
-              <Button 
-                    className="bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all"
-              >
-                Apply Now
-              </Button>
+              <div className="pt-2 md:pt-4 sticky bottom-6 md:relative md:bottom-0 z-10">
+                <Link href="/apply" className="block w-full md:w-auto">
+                  <Button 
+                    className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
+                  >
+                    Apply Now
+                  </Button>
                 </Link>
-            </div>
+              </div>
             </ScrollAnimation>
             
-            {/* Cube */}
-            <ScrollAnimation type="fade" delay={0.3} className="w-full aspect-square">
+            {/* Cube - Hide on smaller screens */}
+            <ScrollAnimation type="fade" delay={0.3} className="hidden md:block w-full aspect-square">
               <CodeCube />
             </ScrollAnimation>
           </div>
@@ -48,20 +48,20 @@ export default function HeroSection() {
       </section>
 
       {/* Two Tracks Section - Redesigned */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <ScrollAnimation type="fade" className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#545454] mb-6">Our Programs</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <ScrollAnimation type="fade" className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#545454] mb-4 md:mb-6">Our Programs</h2>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
               Whether you're a founder building the next big thing, an aspiring investor, or just want to stay connected with the entrepreneurial community, we have a program designed for you.
             </p>
           </ScrollAnimation>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
-              <div className="flex items-center mb-6">
-                <div className="bg-gray-50 p-3 rounded-xl mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+            <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-4 md:mb-6">
+                <div className="bg-gray-50 p-2 md:p-3 rounded-xl mr-3 md:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"></path>
                     <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
                     <path d="M12 2v2"></path>
@@ -70,109 +70,109 @@ export default function HeroSection() {
                     <path d="M11 10.27 7 3.34"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#545454]">Orbit</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#545454]">Orbit</h3>
               </div>
-              <p className="text-[#545454]/80 mb-8">
+              <p className="text-sm md:text-base text-[#545454]/80 mb-6 md:mb-8">
                 For students who are actively building startups and want to take their venture to the next level.
               </p>
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Weekly workshops and peer feedback sessions</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Weekly workshops and peer feedback sessions</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Access to industry mentors</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Access to industry mentors</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Demo Day opportunities</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Demo Day opportunities</span>
                 </div>
               </div>
-              <div className="mt-auto space-y-3">
+              <div className="mt-auto space-y-2 md:space-y-3">
                 <Link href="/orbit" className="block">
-                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5">
+                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5 text-sm md:text-base py-2 md:py-3">
                     Learn More
                   </Button>
                 </Link>
                 <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
                     Apply Now
                   </Button>
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
-              <div className="flex items-center mb-6">
-                <div className="bg-gray-50 p-3 rounded-xl mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-4 md:mb-6">
+                <div className="bg-gray-50 p-2 md:p-3 rounded-xl mr-3 md:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="12" y1="1" x2="12" y2="23"></line>
                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#545454]">Launch Ventures</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#545454]">Launch Ventures</h3>
                 <span className="ml-2 px-2 py-0.5 bg-gray-100 text-[#545454]/70 text-xs rounded-full whitespace-nowrap">Coming Soon</span>
               </div>
-              <p className="text-[#545454]/80 mb-8">
+              <p className="text-sm md:text-base text-[#545454]/80 mb-6 md:mb-8">
                 For aspiring venture capitalists and finance-minded students interested in learning how early-stage investing works.
               </p>
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">VC mentorship sessions</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">VC mentorship sessions</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Startup evaluation practice</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Startup evaluation practice</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Investment community access</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Investment community access</span>
                 </div>
               </div>
-              <div className="mt-auto space-y-3">
+              <div className="mt-auto space-y-2 md:space-y-3">
                 <Link href="/launch-fund" className="block">
-                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5">
+                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5 text-sm md:text-base py-2 md:py-3">
                     Learn More
                   </Button>
                 </Link>
                 <Link href="/launch-fund" className="block">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
                     Express Interest
                   </Button>
                 </Link>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
-              <div className="flex items-center mb-6">
-                <div className="bg-gray-50 p-3 rounded-xl mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all h-full flex flex-col">
+              <div className="flex items-center mb-4 md:mb-6">
+                <div className="bg-gray-50 p-2 md:p-3 rounded-xl mr-3 md:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#545454" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#545454]">General Member</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#545454]">General Member</h3>
               </div>
-              <p className="text-[#545454]/80 mb-8">
+              <p className="text-sm md:text-base text-[#545454]/80 mb-6 md:mb-8">
                 For students who want to stay close to the action. A great entry point if you're still exploring or want to learn from the sidelines before jumping in.
               </p>
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Access to speaker events</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Access to speaker events</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                  <span className="text-[#545454]/80">Join panel discussions</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
+                  <span className="text-sm md:text-base text-[#545454]/80">Join panel discussions</span>
                 </div>
               </div>
               <div className="mt-auto">
                 <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20">
+                  <Button className="w-full bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 text-sm md:text-base py-2 md:py-3">
                     Join Now
                   </Button>
                 </a>
