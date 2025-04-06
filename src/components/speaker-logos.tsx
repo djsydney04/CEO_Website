@@ -10,7 +10,8 @@ export function SpeakerLogos() {
     { id: 1, name: "Kally", logo: "/SpeakerLogos/1.svg" },
     { id: 2, name: "Xbox", logo: "/SpeakerLogos/2.svg" },
     { id: 3, name: "Billabong", logo: "/SpeakerLogos/3.svg" },
-    { id: 4, name: "New Logo", logo: "/SpeakerLogos/Untitled design (3).svg" }
+    { id: 4, name: "New Logo", logo: "/SpeakerLogos/Untitled design (3).svg" },
+    { id: 5, name: "Cents", logo: "/CentsLogo.svg" }
   ]
   
   return (
