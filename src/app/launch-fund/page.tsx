@@ -15,18 +15,18 @@ export default function LaunchFundPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             {/* Hero Section - Clean Apple-inspired design */}
-            <div className="mb-24">
+            <div className="mb-16">
               <ScrollAnimation type="fade">
                 <div className="inline-block mb-4">
                   <span className="text-[#545454] text-sm font-medium">Coming Soon — Investor Track</span>
                 </div>
                 <h1 className="text-6xl font-bold text-[#545454] mb-6 leading-tight tracking-tight">
-                  The Launch Fund
+                  Launch Ventures
                 </h1>
                 <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                 <div className="flex flex-col md:flex-row md:items-center gap-12">
                   <div className="w-full">
-                    <p className="text-xl text-[#545454]/90 mb-6">
+                    <p className="text-xl text-[#545454]/90">
                       For aspiring venture capitalists and finance-minded students interested in learning how early-stage investing works. Coming next semester.
                     </p>
                   </div>
