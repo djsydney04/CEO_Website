@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </p>
               </div>
               
-              <div className="pt-2 md:pt-4 sticky bottom-6 md:relative md:bottom-0 z-10">
+              <div className="fixed md:relative bottom-6 md:bottom-0 left-4 right-4 md:left-0 md:right-0 z-10 md:pt-4">
                 <Link href="/apply" className="block w-full md:w-auto">
                   <Button 
                     className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
