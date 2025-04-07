@@ -15,7 +15,7 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/orbit', label: 'Orbit' },
     { href: '/launch-fund', label: 'Launch Ventures' },
-    { href: 'https://substack.com/@chapmanentrepreneurshiporg', label: 'Stack', external: true },
+    { href: 'https://substack.com/@chapmanentrepreneurshiporg', label: 'Blog', external: true },
   ]
 
   return (
@@ -25,7 +25,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/CEO_.svg"
+              src="/CEOLogo.svg"
               alt="Chapman Entrepreneurs Organization Logo" 
               width={120} 
               height={45} 

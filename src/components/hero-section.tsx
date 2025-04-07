@@ -36,13 +36,6 @@ export default function HeroSection() {
                     Apply Now
                   </Button>
                 </Link>
-                <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="block w-full md:w-auto">
-                  <Button 
-                    className="w-full md:w-auto bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 text-lg px-10 py-3 shadow-sm hover:shadow-md transition-all rounded-xl"
-                  >
-                    Apply to Orbit
-                  </Button>
-                </a>
               </div>
             </ScrollAnimation>
             
@@ -82,28 +75,33 @@ export default function HeroSection() {
                 <h3 className="text-lg md:text-xl font-bold text-[#545454]">Orbit</h3>
               </div>
               <p className="text-sm md:text-base text-[#545454]/80 mb-4">
-                For founders and individuals with unique talents building the next big thing. Get funding, mentorship, and resources to turn your innovative ideas into successful ventures.
+                Chapman Orbit is our founder-focused cohort, designed for innovators, creators, and individuals with unique talents who are actively building something impactful. Whether you're a technical founder developing a prototype, a creative mind disrupting an industry, or someone with a special skill set solving real problems, Orbit is your launchpad.
               </p>
               <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Startup funding</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Weekly founder sessions</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Expert mentorship</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">1-on-1 mentorship</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Founder community</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Startup resources & network</span>
                 </div>
               </div>
-              <div className="mt-auto">
+              <div className="mt-auto space-y-2 md:space-y-3">
                 <Link href="/orbit" className="block">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
+                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5 text-sm md:text-base py-2 md:py-3">
                     Learn More
                   </Button>
                 </Link>
+                <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
+                    Apply Now
+                  </Button>
+                </a>
               </div>
             </div>
 
@@ -119,20 +117,20 @@ export default function HeroSection() {
                 <span className="ml-2 px-2 py-0.5 bg-gray-100 text-[#545454]/70 text-xs rounded-full whitespace-nowrap">Coming Soon</span>
               </div>
               <p className="text-sm md:text-base text-[#545454]/80 mb-6 md:mb-8">
-                For aspiring venture capitalists and finance-minded students interested in learning how early-stage investing works.
+                Join our venture capital program to learn about early-stage investing through hands-on experience. Work with real startups, learn from VCs, and develop your investment thesis.
               </p>
               <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">VC mentorship sessions</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Learn from active VCs</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Startup evaluation practice</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Evaluate real startups</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Investment community access</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Build investment skills</span>
                 </div>
               </div>
               <div className="mt-auto space-y-2 md:space-y-3">
@@ -141,11 +139,11 @@ export default function HeroSection() {
                     Learn More
                   </Button>
                 </Link>
-                <Link href="/launch-fund" className="block">
+                <a href="https://www.notion.so/1ca3b389b4ca80838ba6e65b2f49823f?pvs=106" target="_blank" rel="noopener noreferrer" className="block">
                   <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
                     Express Interest
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
 
