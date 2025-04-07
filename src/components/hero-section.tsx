@@ -31,7 +31,7 @@ export default function HeroSection() {
             
             {/* Cube - Show on all screens with adjusted size */}
             <ScrollAnimation type="fade" delay={0.3} className="order-2 md:order-none flex justify-center items-center w-full">
-              <div className="w-full max-w-[400px] aspect-square scale-75 md:scale-100">
+              <div className="w-full max-w-[300px] md:max-w-[600px] aspect-square scale-75 md:scale-100">
                 <CodeCube />
               </div>
             </ScrollAnimation>
