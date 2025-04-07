@@ -23,9 +23,16 @@ export default function HeroSection() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 md:mb-6 tracking-tight">
                 Chapman Entrepreneurs Organization
                 </h1>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-4 md:mt-6">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
                   We believe in fearless execution, rapid iteration, and relentless problem-solving.
                 </p>
+                <Link href="/apply" className="block w-full md:w-auto">
+                  <Button 
+                    className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
+                  >
+                    Apply Now
+                  </Button>
+                </Link>
               </div>
             </ScrollAnimation>
             
@@ -35,28 +42,6 @@ export default function HeroSection() {
                 <CodeCube />
               </div>
             </ScrollAnimation>
-
-            {/* Apply Button - Mobile Only */}
-            <div className="order-3 md:hidden w-full mt-8">
-              <Link href="/apply" className="block w-full">
-                <Button 
-                  className="w-full bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
-                >
-                  Apply Now
-                </Button>
-              </Link>
-            </div>
-
-            {/* Apply Button - Desktop Only */}
-            <div className="hidden md:block md:order-none mt-8 md:mt-4">
-              <Link href="/apply" className="block w-full md:w-auto">
-                <Button 
-                  className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
-                >
-                  Apply Now
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
