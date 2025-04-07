@@ -45,7 +45,7 @@ export default function ApplyPage() {
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Access to startup funding</span>
+                        <span className="text-[#545454]/80">Hands-on product development</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>

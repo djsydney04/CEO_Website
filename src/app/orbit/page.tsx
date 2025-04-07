@@ -318,7 +318,7 @@ export default function OrbitPage() {
                       <h3 className="text-2xl font-semibold text-[#545454]">Demo Days</h3>
                     </div>
                     <p className="text-lg text-[#545454]/80 ml-14">
-                      Present your startup to Chapman's network of investors, entrepreneurs, and industry leaders. Get valuable feedback and potential investment opportunities.
+                      Present your startup to Chapman's network of entrepreneurs and industry leaders. Get valuable feedback and connections to help grow your venture.
                     </p>
                   </div>
                 </div>

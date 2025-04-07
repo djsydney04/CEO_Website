@@ -80,15 +80,15 @@ export default function HeroSection() {
               <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Weekly founder sessions</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Hands-on product development</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">1-on-1 mentorship</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Expert mentorship</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Startup resources & network</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Founder community</span>
                 </div>
               </div>
               <div className="mt-auto space-y-2 md:space-y-3">
