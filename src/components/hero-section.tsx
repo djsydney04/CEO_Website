@@ -134,7 +134,7 @@ export default function HeroSection() {
                 </div>
               </div>
               <div className="mt-auto space-y-2 md:space-y-3">
-                <Link href="/launch-fund" className="block">
+                <Link href="/launch-ventures" className="block">
                   <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5 text-sm md:text-base py-2 md:py-3">
                     Learn More
                   </Button>

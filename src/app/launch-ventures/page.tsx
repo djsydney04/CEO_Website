@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer'
 import { ScrollAnimation } from '@/components/scroll-animation'
 import Image from 'next/image'
 
-export default function LaunchFundPage() {
+export default function LaunchVenturesPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -37,9 +37,9 @@ export default function LaunchFundPage() {
             {/* Main Info - Simplified and focused content */}
             <div className="mb-20">
               <ScrollAnimation type="fade">
-                <h2 className="text-3xl font-bold text-[#545454] mb-5">About the Launch Fund</h2>
+                <h2 className="text-3xl font-bold text-[#545454] mb-5">About Launch Ventures</h2>
                 <p className="text-lg text-[#545454]/80 mb-10">
-                  The Launch Fund is the venture side of our organization, dedicated to students who want to learn how investing really works behind the scenes. 
+                  Launch Ventures is the venture side of our organization, dedicated to students who want to learn how investing really works behind the scenes. 
                   Think of it as a hands-on experience in venture capital, deal sourcing, and everything else you need to know about fueling the next generation of startups.
                 </p>
                 
@@ -129,7 +129,7 @@ export default function LaunchFundPage() {
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-[#545454] mb-3">Express Interest</h2>
                   <p className="text-lg text-[#545454]/80 max-w-xl mx-auto mb-8">
-                    The Launch Fund will be accepting applications next semester. Express your interest now to be notified when applications open.
+                    Launch Ventures will be accepting applications next semester. Express your interest now to be notified when applications open.
                   </p>
                   
                   <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer">
