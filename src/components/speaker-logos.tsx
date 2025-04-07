@@ -21,19 +21,18 @@ export function SpeakerLogos() {
         We bring in experts from leading brands to share real-world entrepreneurial experience and industry best practices.
       </p>
       
-      <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-12 flex-wrap">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 items-center justify-items-center">
         {companies.map((company) => (
-          <div key={company.id} className="group w-1/2 sm:w-auto">
-            <div className="relative w-32 sm:w-36 md:w-44 h-24 sm:h-28 md:h-32 flex items-center justify-center p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+          <div key={company.id} className="w-full max-w-[160px] md:max-w-[200px]">
+            <div className="relative aspect-[3/2] w-full bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-4 md:p-6 flex items-center justify-center">
               <Image
                 src={company.logo}
                 alt={`${company.name} logo`}
-                width={176}
-                height={128}
-                className="w-full h-full object-contain opacity-75 group-hover:opacity-100 transition-all duration-300"
-                quality={100}
+                fill
+                className="object-contain p-2"
+                sizes="(max-width: 768px) 160px, 200px"
+                quality={95}
                 priority
-                unoptimized
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function HeroSection() {
       <Navigation />
 
       {/* Split Hero Section */}
-      <section className="min-h-[90vh] pt-12 md:pt-20">
+      <section className="min-h-[90vh] pt-24 md:pt-28">
         <div className="container mx-auto px-4 h-full">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
             {/* Text Content */}
