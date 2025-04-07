@@ -25,25 +25,16 @@ export function SpeakerLogos() {
         {companies.map((company) => (
           <div key={company.id} className="group w-1/2 sm:w-auto">
             <div className="relative w-32 sm:w-36 md:w-44 h-24 sm:h-28 md:h-32 flex items-center justify-center p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="relative w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300 opacity-75 group-hover:opacity-100">
-                <Image
-                  src={company.logo}
-                  alt={`${company.name} logo`}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  sizes="(max-width: 640px) 128px, (max-width: 768px) 144px, 176px"
-                />
-              </div>
-              
-              {/* Subtle hover effect */}
-              <motion.div 
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 pointer-events-none"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50/5 to-transparent rounded-xl"></div>
-              </motion.div>
+              <Image
+                src={company.logo}
+                alt={`${company.name} logo`}
+                width={176}
+                height={128}
+                className="w-full h-full object-contain opacity-75 group-hover:opacity-100 transition-all duration-300"
+                quality={100}
+                priority
+                unoptimized
+              />
             </div>
           </div>
         ))}

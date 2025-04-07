@@ -45,25 +45,26 @@ export default function CodeCube() {
     const renderer = new THREE.WebGLRenderer({ 
       antialias: true,
       alpha: true,
-      preserveDrawingBuffer: true
+      powerPreference: 'low-power' // Optimize for mobile
     })
-    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) // Cap pixel ratio for performance
     
     // Create binary textures with transparent background and gray text
     const materials = Array(6).fill(null).map(() => {
       const canvas = document.createElement('canvas')
-      canvas.width = 2048
-      canvas.height = 2048
+      const isMobile = window.innerWidth < 768
+      canvas.width = isMobile ? 1024 : 2048 // Reduce texture size on mobile
+      canvas.height = isMobile ? 1024 : 2048
       const ctx = canvas.getContext('2d')!
       
       // Make background fully transparent
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       
-      // Generate binary pattern - 32x32 grid for larger, more visible digits
-      const pattern = generateBinaryPattern(32, 32)
-      const cellSize = canvas.width / 32
+      // Generate binary pattern - Reduce grid size on mobile
+      const pattern = generateBinaryPattern(isMobile ? 16 : 32, isMobile ? 16 : 32)
+      const cellSize = canvas.width / (isMobile ? 16 : 32)
       
-      // Larger font size and bold for better visibility
+      // Adjust font size for mobile
       ctx.font = `bold ${Math.floor(cellSize * 0.7)}px "Courier New", monospace`
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
@@ -72,15 +73,13 @@ export default function CodeCube() {
         for (let j = 0; j < row.length; j++) {
           const x = (j * cellSize) + (cellSize / 2)
           const y = (i * cellSize) + (cellSize / 2)
-          
-          // Draw with the site's gray color
           ctx.fillStyle = '#545454'
           ctx.fillText(row[j], x, y)
         }
       })
       
       const texture = new THREE.CanvasTexture(canvas)
-      texture.anisotropy = renderer.capabilities.getMaxAnisotropy()
+      texture.anisotropy = Math.min(4, renderer.capabilities.getMaxAnisotropy()) // Limit anisotropy on mobile
       texture.needsUpdate = true
 
       return new THREE.MeshBasicMaterial({
@@ -96,8 +95,9 @@ export default function CodeCube() {
     const cube = new THREE.Mesh(geometry, materials)
     scene.add(cube)
 
-    // Create particles
-    const particleCount = 150
+    // Create particles - Reduce count on mobile
+    const isMobile = window.innerWidth < 768
+    const particleCount = isMobile ? 75 : 150
     const particleGeometry = new THREE.BufferGeometry()
     const particlePositions = new Float32Array(particleCount * 3)
     const particleVelocities = new Float32Array(particleCount * 3)
@@ -118,8 +118,8 @@ export default function CodeCube() {
       particlePositions[index * 3 + 1] = Math.sin(angle) * Math.sqrt(1 - u * u) * radius
       particlePositions[index * 3 + 2] = u * radius
 
-      // Velocity away from cube
-      const speed = 0.01 + Math.random() * 0.02
+      // Velocity away from cube - Slower on mobile
+      const speed = (0.01 + Math.random() * 0.02) * (isMobile ? 0.5 : 1)
       particleVelocities[index * 3] = particlePositions[index * 3] * speed
       particleVelocities[index * 3 + 1] = particlePositions[index * 3 + 1] * speed
       particleVelocities[index * 3 + 2] = particlePositions[index * 3 + 2] * speed
@@ -132,7 +132,7 @@ export default function CodeCube() {
     
     const particleMaterial = new THREE.PointsMaterial({
       color: 0x545454,
-      size: 0.03,
+      size: isMobile ? 0.02 : 0.03,
       transparent: true,
       opacity: 0.4,
       blending: THREE.AdditiveBlending
@@ -167,16 +167,24 @@ export default function CodeCube() {
 
     // Animation
     let time = 0
+    let lastTime = 0
     let animationFrameId: number
-    function animate() {
-      time += 0.01
-      cube.rotation.x += 0.002
-      cube.rotation.y += 0.002
+    function animate(currentTime: number) {
+      // Limit frame rate on mobile
+      if (isMobile && currentTime - lastTime < 32) { // ~30fps on mobile
+        animationFrameId = requestAnimationFrame(animate)
+        return
+      }
+      lastTime = currentTime
+      
+      time += isMobile ? 0.005 : 0.01 // Slower rotation on mobile
+      cube.rotation.x += isMobile ? 0.001 : 0.002
+      cube.rotation.y += isMobile ? 0.001 : 0.002
       
       // Update particles
       const positions = particleGeometry.attributes.position.array as Float32Array
       for (let i = 0; i < particleCount; i++) {
-        particleLifetimes[i] += 0.01
+        particleLifetimes[i] += isMobile ? 0.005 : 0.01
         if (particleLifetimes[i] > 1) {
           resetParticle(i)
         } else {
@@ -192,7 +200,7 @@ export default function CodeCube() {
       renderer.render(scene, camera)
       animationFrameId = requestAnimationFrame(animate)
     }
-    animate()
+    animate(0)
 
     // Handle resize
     function handleResize() {

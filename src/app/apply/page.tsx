@@ -24,8 +24,8 @@ export default function ApplyPage() {
                 </h1>
                 <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                 <div className="max-w-2xl">
-                  <p className="text-xl text-[#545454]/90 mb-8">
-                    Choose your path to entrepreneurship. Whether you're ready to apply for Orbit or interested in Launch Ventures, we're here to support your journey.
+                  <p className="text-lg text-[#545454]/80 mb-12">
+                    Choose your path to entrepreneurship. Whether you're a founder, an innovator with unique talents, or interested in Launch Ventures, we're here to support your journey.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -40,28 +40,24 @@ export default function ApplyPage() {
                   <div className="relative">
                     <h2 className="text-2xl font-bold text-[#545454] mb-4">Apply to Orbit</h2>
                     <p className="text-[#545454]/80 mb-6">
-                      For founders who are actively building and ready to take their startup to the next level through mentorship, resources, and community.
+                      For founders and individuals with unique talents who are actively building something impactful. Get the resources, mentorship, and community you need to turn your innovative ideas into successful ventures.
                     </p>
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Weekly founder sessions and workshops</span>
+                        <span className="text-[#545454]/80">Access to startup funding</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">One-on-one mentorship</span>
+                        <span className="text-[#545454]/80">Expert mentorship and guidance</span>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Access to founder network</span>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-[#545454]/40 rounded-full mr-3 mt-2"></div>
-                        <span className="text-[#545454]/80">Demo Day presentation opportunity</span>
+                        <span className="text-[#545454]/80">Join our founder community</span>
                       </div>
                     </div>
-                    <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
                         Apply Now
                       </Button>
                     </a>

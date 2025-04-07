@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </p>
               </div>
               
-              <div className="mt-8 md:mt-4">
+              <div className="mt-8 md:mt-4 flex flex-col md:flex-row gap-4">
                 <Link href="/apply" className="block w-full md:w-auto">
                   <Button 
                     className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
@@ -36,12 +36,21 @@ export default function HeroSection() {
                     Apply Now
                   </Button>
                 </Link>
+                <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="block w-full md:w-auto">
+                  <Button 
+                    className="w-full md:w-auto bg-white hover:bg-gray-50 text-[#545454] border border-[#545454]/20 text-lg px-10 py-3 shadow-sm hover:shadow-md transition-all rounded-xl"
+                  >
+                    Apply to Orbit
+                  </Button>
+                </a>
               </div>
             </ScrollAnimation>
             
-            {/* Cube - Hide on smaller screens */}
-            <ScrollAnimation type="fade" delay={0.3} className="hidden md:block w-full aspect-square">
-              <CodeCube />
+            {/* Cube - Show on all screens with adjusted size */}
+            <ScrollAnimation type="fade" delay={0.3} className="w-full aspect-square">
+              <div className="md:block w-full aspect-square scale-75 md:scale-100">
+                <CodeCube />
+              </div>
             </ScrollAnimation>
           </div>
         </div>
@@ -72,34 +81,29 @@ export default function HeroSection() {
                 </div>
                 <h3 className="text-lg md:text-xl font-bold text-[#545454]">Orbit</h3>
               </div>
-              <p className="text-sm md:text-base text-[#545454]/80 mb-6 md:mb-8">
-                For students who are actively building startups and want to take their venture to the next level.
+              <p className="text-sm md:text-base text-[#545454]/80 mb-4">
+                For founders and individuals with unique talents building the next big thing. Get funding, mentorship, and resources to turn your innovative ideas into successful ventures.
               </p>
-              <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+              <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Weekly workshops and peer feedback sessions</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Startup funding</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Access to industry mentors</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Expert mentorship</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#545454]/40 rounded-full mr-2 md:mr-3 mt-1.5 md:mt-2"></div>
-                  <span className="text-sm md:text-base text-[#545454]/80">Demo Day opportunities</span>
+                  <span className="text-sm md:text-base text-[#545454]/80">Founder community</span>
                 </div>
               </div>
-              <div className="mt-auto space-y-2 md:space-y-3">
+              <div className="mt-auto">
                 <Link href="/orbit" className="block">
-                  <Button variant="outline" className="w-full border-[#545454] text-[#545454] hover:bg-[#545454]/5 text-sm md:text-base py-2 md:py-3">
+                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
                     Learn More
                   </Button>
                 </Link>
-                <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-[#545454] hover:bg-[#444444] text-white text-sm md:text-base py-2 md:py-3">
-                    Apply Now
-                  </Button>
-                </a>
               </div>
             </div>
 
@@ -181,7 +185,7 @@ export default function HeroSection() {
           </div>
           
           {/* Speaker Logos Section */}
-          <div className="mt-28">
+          <div className="mt-36">
             <SpeakerLogos />
           </div>
 

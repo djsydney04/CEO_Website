@@ -22,47 +22,32 @@ export default function OrbitPage() {
                 <div className="inline-block mb-4">
                   <span className="text-[#545454] text-sm font-medium">Founders Track</span>
                 </div>
-                <h1 className="text-6xl font-bold text-[#545454] mb-6 leading-tight tracking-tight">
+                <h1 className="text-4xl sm:text-5xl font-bold text-[#545454] mb-4 leading-tight">
                   Chapman Orbit
                 </h1>
                 <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
                 <div className="max-w-2xl">
-                  <p className="text-xl text-[#545454]/90 mb-8">
-                    Orbit is Chapman's premier startup accelerator program. We provide funding, mentorship, and resources to help you take your startup to the next level.
+                  <p className="text-lg text-[#545454]/80 mb-8">
+                    Chapman Orbit is our founder-focused cohort, designed for innovators, creators, and individuals with unique talents who are actively building something impactful. Whether you're a technical founder developing a prototype, a creative mind disrupting an industry, or someone with a special skill set solving real problems, Orbit is your launchpad.
                   </p>
-                  <a href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b?pvs=105" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-[#545454] hover:bg-[#444444] text-white px-12 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
+                  <Link href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105">
+                    <Button className="bg-[#545454] hover:bg-[#444444] text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
                       Apply to Orbit
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </ScrollAnimation>
             </div>
 
             {/* Main Intro */}
-            <div className="mb-32">
-              <ScrollAnimation type="fade">
-                <div className="max-w-3xl">
-                  <div className="h-[1px] w-16 bg-[#545454]/30 mb-10"></div>
-                  <p className="text-xl text-[#545454]/90 mb-6">
-                    Chapman Orbit is our founder-focused cohort, designed for those who are already doing something real with their idea. 
-                    If you're tinkering away at a prototype, rallying potential users, or even looking at early funding, Orbit is your home base.
-                  </p>
-                  <p className="text-lg text-[#545454]/80">
-                    This isn't about theorizing—it's about building, testing, and iterating until you find what works. With Orbit, you'll join a community of like-minded founders all sharing the same journey.
-                  </p>
-                </div>
-              </ScrollAnimation>
+            <div className="mt-16 mb-24">
+              <h2 className="text-3xl font-bold text-[#545454] mb-4">What Makes Orbit Different</h2>
+              <p className="text-lg text-[#545454]/80">Our approach is designed to accelerate your startup's growth</p>
             </div>
 
             {/* Program Features */}
-            <div className="mb-32">
+            <div className="mb-24">
               <ScrollAnimation type="fade">
-                <div className="max-w-xl mb-12">
-                  <h2 className="text-3xl font-bold text-[#545454] mb-4">What Makes Orbit Different</h2>
-                  <p className="text-lg text-[#545454]/80">Our approach is designed to accelerate your startup's growth</p>
-                </div>
-              
                 <div className="grid md:grid-cols-3 gap-12">
                   <div className="space-y-5">
                     <div className="mb-4">
@@ -124,7 +109,7 @@ export default function OrbitPage() {
             </div>
 
             {/* Who Should Apply */}
-            <div className="mb-32">
+            <div className="mb-24">
               <ScrollAnimation type="fade">
                 <div className="max-w-xl mb-12">
                   <h2 className="text-3xl font-bold text-[#545454] mb-4">Who Should Apply</h2>
@@ -195,7 +180,7 @@ export default function OrbitPage() {
             </div>
 
             {/* How Orbit Works */}
-            <section className="mb-32">
+            <section className="mb-24">
               <ScrollAnimation type="fade">
                 <div className="max-w-xl mb-12">
                   <h2 className="text-3xl font-bold text-[#545454] mb-4">How Orbit Works</h2>
@@ -341,7 +326,7 @@ export default function OrbitPage() {
             </section>
 
             {/* Apply Section */}
-            <div className="mb-12">
+            <div className="mb-24">
               <ApplySection />
             </div>
           </div>
