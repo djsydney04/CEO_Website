@@ -16,35 +16,47 @@ export default function HeroSection() {
       {/* Split Hero Section */}
       <section className="min-h-[90vh] pt-24 md:pt-28">
         <div className="container mx-auto px-4 h-full">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
             {/* Text Content */}
-            <ScrollAnimation type="slide-right" className="space-y-6 md:space-y-10">
+            <ScrollAnimation type="slide-right" className="order-1 md:order-none space-y-6 md:space-y-10">
               <div>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 md:mb-6 tracking-tight">
                 Chapman Entrepreneurs Organization
-              </h1>
+                </h1>
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-4 md:mt-6">
                   We believe in fearless execution, rapid iteration, and relentless problem-solving.
                 </p>
               </div>
-              
-              <div className="mt-8 md:mt-4 flex flex-col md:flex-row gap-4">
-                <Link href="/apply" className="block w-full md:w-auto">
-                  <Button 
-                    className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
-                  >
-                    Apply Now
-                  </Button>
-                </Link>
-              </div>
             </ScrollAnimation>
             
             {/* Cube - Show on all screens with adjusted size */}
-            <ScrollAnimation type="fade" delay={0.3} className="w-full aspect-square">
-              <div className="md:block w-full aspect-square scale-75 md:scale-100">
+            <ScrollAnimation type="fade" delay={0.3} className="order-2 md:order-none flex justify-center items-center w-full">
+              <div className="w-full max-w-[400px] aspect-square scale-75 md:scale-100">
                 <CodeCube />
               </div>
             </ScrollAnimation>
+
+            {/* Apply Button - Mobile Only */}
+            <div className="order-3 md:hidden w-full mt-8">
+              <Link href="/apply" className="block w-full">
+                <Button 
+                  className="w-full bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
+                >
+                  Apply Now
+                </Button>
+              </Link>
+            </div>
+
+            {/* Apply Button - Desktop Only */}
+            <div className="hidden md:block md:order-none mt-8 md:mt-4">
+              <Link href="/apply" className="block w-full md:w-auto">
+                <Button 
+                  className="w-full md:w-auto bg-[#545454] hover:bg-[#444444] text-white text-lg px-10 py-3 shadow-md hover:shadow-lg transition-all rounded-xl"
+                >
+                  Apply Now
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
