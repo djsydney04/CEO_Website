@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "Chapman CEO",
   description: "Chapman Entrepreneurship Organization",
   icons: {
-    icon: '/SymbolLogo.png',
-    apple: '/SymbolLogo.png',
+    icon: '/TabIcon.png',
+    apple: '/TabIcon.png',
   },
   openGraph: {
     title: 'Chapman CEO',
