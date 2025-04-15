@@ -18,9 +18,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
           {
-            'bg-[#545454] text-white hover:bg-[#444444]': variant === 'default',
-            'border border-[#545454] text-[#545454] hover:bg-[#545454] hover:text-white': variant === 'outline',
-            'text-[#545454] hover:bg-gray-100': variant === 'ghost',
+            'bg-black text-white !text-white hover:bg-black/80': variant === 'default',
+            'border border-black text-black hover:bg-black hover:text-white': variant === 'outline',
+            'text-black hover:bg-black/5': variant === 'ghost',
           },
           {
             'text-sm px-3 py-1.5': size === 'sm',

@@ -15,9 +15,9 @@ export function SpeakerLogos() {
   ]
   
   return (
-    <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-10 shadow-xl border border-gray-100">
-      <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#545454] mb-2 sm:mb-3">Speakers and Mentors From Top Industry Leaders</h2>
-      <p className="text-base sm:text-lg text-center text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-10 shadow-xl border border-black/10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-black !text-black mb-2 sm:mb-3">Speakers and Mentors From Top Industry Leaders</h2>
+      <p className="text-base sm:text-lg text-center text-black max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
         We bring in experts from leading brands to share real-world entrepreneurial experience and industry best practices.
       </p>
       

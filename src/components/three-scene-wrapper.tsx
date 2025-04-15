@@ -8,15 +8,23 @@ const ThreeSceneClient = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="h-[600px] w-full bg-gray-50 animate-pulse" />
+      <div className="h-[600px] w-full bg-black/5 animate-pulse" />
     )
   }
 )
 
 export default function ThreeSceneWrapper() {
   return (
-    <Suspense fallback={<div className="h-[600px] w-full bg-gray-50 animate-pulse" />}>
-      <ThreeSceneClient />
-    </Suspense>
+    <div className="relative">
+      {!ThreeSceneClient && (
+        <div className="h-[600px] w-full bg-black/5 animate-pulse" />
+      )}
+      
+      {ThreeSceneClient && (
+        <Suspense fallback={<div className="h-[600px] w-full bg-black/5 animate-pulse" />}>
+          <ThreeSceneClient />
+        </Suspense>
+      )}
+    </div>
   )
 } 

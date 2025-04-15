@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+@layer base {
+  html {
+    color: black;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, span, div:not(button *) {
+    color: black;
+  }
+}
+
+/* Override to preserve button text color */
+button, .btn {
+  color: inherit;
+} 

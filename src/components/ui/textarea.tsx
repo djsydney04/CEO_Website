@@ -1,22 +1,19 @@
 'use client'
 
-import * as React from 'react'
+import { TextareaHTMLAttributes, forwardRef } from 'react'
 
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  // Additional props if needed
+}
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
-    return (
-      <textarea
-        className={`w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-800 focus:border-gray-800 min-h-[80px] ${className || ''}`}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ className, ...props }, ref) => (
+    <textarea
+      ref={ref}
+      className={`w-full px-3 py-2 border border-black/20 rounded-lg focus:outline-none focus:ring-1 focus:ring-black focus:border-black min-h-[80px] ${className || ''}`}
+      {...props}
+    />
+  )
 )
 
-Textarea.displayName = 'Textarea'
-
-export { Textarea } 
+Textarea.displayName = 'Textarea' 
