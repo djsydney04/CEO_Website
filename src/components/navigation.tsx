@@ -25,7 +25,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/CEOSymbol.svg"
+              src="/CeoSymbol.svg"
               alt="Chapman Entrepreneurs Organization Logo" 
               width={181} 
               height={72} 
