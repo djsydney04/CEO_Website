@@ -14,7 +14,6 @@ export function Navigation() {
   const links = [
     { href: '/', label: 'Home' },
     { href: '/orbit', label: 'Orbit' },
-    { href: '/launch-ventures', label: 'Launch Ventures' },
     { href: 'https://substack.com/@chapmanentrepreneurshiporg', label: 'Blog', external: true },
   ]
 
