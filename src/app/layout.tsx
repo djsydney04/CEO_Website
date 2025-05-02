@@ -7,20 +7,30 @@ import ClientLayout from '@/components/ClientLayout';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Chapman CEO",
+  metadataBase: new URL('https://chapmanentrepreneurs.org'),
+  title: {
+    template: '%s | Chapman CEO',
+    default: 'Chapman CEO',
+  },
   description: "Chapman Entrepreneurship Organization",
   icons: {
     icon: '/CeoSymbol.svg',
     apple: '/CeoSymbol.svg',
   },
   openGraph: {
-    title: 'Chapman CEO',
+    title: {
+      template: '%s | Chapman CEO',
+      default: 'Chapman CEO',
+    },
     description: 'Chapman Entrepreneurship Organization',
     images: ['@CEOPreview.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chapman CEO',
+    title: {
+      template: '%s | Chapman CEO',
+      default: 'Chapman CEO',
+    },
     description: 'Chapman Entrepreneurship Organization',
     images: ['@CEOPreview.png'],
   },

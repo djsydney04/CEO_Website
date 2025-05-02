@@ -37,12 +37,12 @@ export default function ApplyPage() {
               <ScrollAnimation type="fade">
                 <div className="bg-white rounded-xl p-8 border border-black/10 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                   <div className="absolute inset-0 bg-gradient-to-b from-white via-black/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
-                  <div className="relative">
+                  <div className="relative h-full flex flex-col">
                     <h2 className="text-2xl font-bold text-black mb-4">Apply to Orbit</h2>
                     <p className="text-black/80 mb-6">
                       For founders and individuals with unique talents who are actively building something impactful. Get the resources, mentorship, and community you need to turn your innovative ideas into successful ventures.
                     </p>
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-4">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-black/40 rounded-full mr-3 mt-2"></div>
                         <span className="text-black/80">Hands-on product development</span>
@@ -56,11 +56,13 @@ export default function ApplyPage() {
                         <span className="text-black/80">Join our founder community</span>
                       </div>
                     </div>
-                    <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-black hover:bg-black/80 text-white !text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
-                        Apply Now
-                      </Button>
-                    </a>
+                    <div className="mt-auto pt-8 -mb-2 -mr-2">
+                      <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                        <Button className="bg-black hover:bg-black/80 text-white !text-white px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                          Apply Now
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -69,12 +71,12 @@ export default function ApplyPage() {
               <ScrollAnimation type="fade">
                 <div className="bg-white rounded-xl p-8 border border-black/10 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                   <div className="absolute inset-0 bg-gradient-to-b from-white via-black/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
-                  <div className="relative">
+                  <div className="relative h-full flex flex-col">
                     <h2 className="text-2xl font-bold text-black mb-4">Express Interest in Launch Ventures</h2>
                     <p className="text-black/80 mb-6">
                       Opening next semester. Join our venture capital program to learn about early-stage investing, deal analysis, and startup evaluation.
                     </p>
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-4">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-black/40 rounded-full mr-3 mt-2"></div>
                         <span className="text-black/80">VC workshops and mentorship</span>
@@ -92,11 +94,13 @@ export default function ApplyPage() {
                         <span className="text-black/80">Early application access</span>
                       </div>
                     </div>
-                    <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        Express Interest
-                      </Button>
-                    </a>
+                    <div className="mt-auto pt-8 -mb-2 -mr-2">
+                      <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                        <Button className="bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all">
+                          Express Interest
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -105,12 +109,12 @@ export default function ApplyPage() {
               <ScrollAnimation type="fade">
                 <div className="bg-white rounded-xl p-8 border border-black/10 shadow-[0_4px_20px_-4px_rgba(84,84,84,0.1)] hover:shadow-[0_8px_30px_-4px_rgba(84,84,84,0.15)] transition-all relative group">
                   <div className="absolute inset-0 bg-gradient-to-b from-white via-black/5 to-white opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
-                  <div className="relative">
+                  <div className="relative h-full flex flex-col">
                     <h2 className="text-2xl font-bold text-black mb-4">Join as General Member</h2>
                     <p className="text-black/80 mb-6">
                       For students who want to stay close to the action. A great entry point if you're still exploring or want to learn from the sidelines before jumping in.
                     </p>
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-4">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-black/40 rounded-full mr-3 mt-2"></div>
                         <span className="text-black/80">Access to select speaker events</span>
@@ -120,11 +124,13 @@ export default function ApplyPage() {
                         <span className="text-black/80">Join panel discussions</span>
                       </div>
                     </div>
-                    <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer">
-                      <Button className="w-full bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        Join Now
-                      </Button>
-                    </a>
+                    <div className="mt-auto pt-8 -mb-2 -mr-2">
+                      <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                        <Button className="bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all">
+                          Join Now
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </ScrollAnimation>

@@ -67,6 +67,14 @@ export default function OpenPositionsPage() {
                       </li>
                     </ul>
                   </div>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6SHi4DtuZp7pueAYpuPHtSh7f4mv-jIKPt0UjemnKFUbL6Q/viewform?usp=sharing" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    <Button className="w-full bg-black hover:bg-black/80 text-white !text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
+                      Apply Now
+                    </Button>
+                  </a>
+                  <p className="text-black/60 mt-4 text-center">Applications close May 4th</p>
                 </div>
               </ScrollAnimation>
 
@@ -98,6 +106,14 @@ export default function OpenPositionsPage() {
                       </li>
                     </ul>
                   </div>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6SHi4DtuZp7pueAYpuPHtSh7f4mv-jIKPt0UjemnKFUbL6Q/viewform?usp=sharing" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    <Button className="w-full bg-black hover:bg-black/80 text-white !text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
+                      Apply Now
+                    </Button>
+                  </a>
+                  <p className="text-black/60 mt-4 text-center">Applications close May 4th</p>
                 </div>
               </ScrollAnimation>
 
@@ -133,6 +149,14 @@ export default function OpenPositionsPage() {
                       </li>
                     </ul>
                   </div>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6SHi4DtuZp7pueAYpuPHtSh7f4mv-jIKPt0UjemnKFUbL6Q/viewform?usp=sharing" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    <Button className="w-full bg-black hover:bg-black/80 text-white !text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
+                      Apply Now
+                    </Button>
+                  </a>
+                  <p className="text-black/60 mt-4 text-center">Applications close May 4th</p>
                 </div>
               </ScrollAnimation>
 
@@ -168,21 +192,14 @@ export default function OpenPositionsPage() {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </ScrollAnimation>
-
-              {/* Apply Button */}
-              <ScrollAnimation type="fade">
-                <div className="text-center mt-12">
-                  <a href="https://chapmanentrepreneurs.slack.com/archives/C08HS1K1CGH/p1746062318711959" 
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6SHi4DtuZp7pueAYpuPHtSh7f4mv-jIKPt0UjemnKFUbL6Q/viewform?usp=sharing" 
                      target="_blank" 
-                     rel="noopener noreferrer"
-                     className="inline-block">
-                    <Button className="bg-black hover:bg-black/80 text-white !text-white px-12 py-3 text-lg rounded-xl shadow-md hover:shadow-lg transition-all">
+                     rel="noopener noreferrer">
+                    <Button className="w-full bg-black hover:bg-black/80 text-white !text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg transition-all">
                       Apply Now
                     </Button>
                   </a>
-                  <p className="text-black/60 mt-4">Applications close May 4th</p>
+                  <p className="text-black/60 mt-4 text-center">Applications close May 4th</p>
                 </div>
               </ScrollAnimation>
             </div>
