@@ -18,12 +18,22 @@ export const metadata: Metadata = {
     apple: '/CeoSymbol.svg',
   },
   openGraph: {
+    type: 'website',
     title: {
       template: '%s | Chapman CEO',
       default: 'Chapman CEO',
     },
     description: 'Chapman Entrepreneurship Organization',
-    images: ['@CEOPreview.png'],
+    url: 'https://chapmanentrepreneurs.org',
+    siteName: 'Chapman CEO',
+    images: [
+      {
+        url: '/@CEOPreview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Chapman CEO Preview'
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,7 +42,7 @@ export const metadata: Metadata = {
       default: 'Chapman CEO',
     },
     description: 'Chapman Entrepreneurship Organization',
-    images: ['@CEOPreview.png'],
+    images: ['/@CEOPreview.png'],
   },
 };
 
