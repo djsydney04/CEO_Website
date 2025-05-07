@@ -59,9 +59,9 @@ export default function ApplyPage() {
                     <div className="mt-auto pt-8 -mb-2 -mr-2">
                       <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
                         <Button className="bg-black hover:bg-black/80 text-white !text-white px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
-                          Apply Now
-                        </Button>
-                      </a>
+                        Apply Now
+                      </Button>
+                    </a>
                     </div>
                   </div>
                 </div>
@@ -97,9 +97,9 @@ export default function ApplyPage() {
                     <div className="mt-auto pt-8 -mb-2 -mr-2">
                       <a href="https://cotton-pea-590.notion.site/1cb3b389b4ca80f0933cf2aa55839077?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
                         <Button className="bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all">
-                          Express Interest
-                        </Button>
-                      </a>
+                        Express Interest
+                      </Button>
+                    </a>
                     </div>
                   </div>
                 </div>
@@ -127,9 +127,9 @@ export default function ApplyPage() {
                     <div className="mt-auto pt-8 -mb-2 -mr-2">
                       <a href="https://cotton-pea-590.notion.site/1cc3b389b4ca8027afa7e5219f777f1c?pvs=105" target="_blank" rel="noopener noreferrer" className="flex justify-end">
                         <Button className="bg-white hover:bg-black/5 text-black !text-black font-medium border border-black/20 px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all">
-                          Join Now
-                        </Button>
-                      </a>
+                        Join Now
+                      </Button>
+                    </a>
                     </div>
                   </div>
                 </div>
