@@ -31,25 +31,42 @@ export function ScrollAnimation({
   const variants: Variants = {
     hidden: {
       opacity: type === 'fade' || type === 'slide-up' || type === 'slide-right' || type === 'scale' ? 0 : 1,
-      y: type === 'slide-up' ? 50 : 0,
-      x: type === 'slide-right' ? -50 : 0,
-      scale: type === 'scale' ? 0.9 : 1,
+      y: type === 'slide-up' ? 70 : 0,
+      x: type === 'slide-right' ? -70 : 0,
+      scale: type === 'scale' ? 0.8 : 1,
+      rotateX: type === 'fade' ? 10 : 0,
     },
     visible: {
       opacity: 1,
       y: 0,
       x: 0,
       scale: 1,
+      rotateX: 0,
       transition: {
-        duration,
+        duration: duration * 1.2,
         delay,
-        ease: [0.25, 0.1, 0.25, 1.0], // Custom easing
+        ease: [0.2, 0.65, 0.3, 0.9], // Enhanced smooth easing
+        opacity: {
+          duration: duration * 1.5,
+          ease: [0.2, 0.65, 0.3, 0.9]
+        },
+        y: {
+          type: "spring",
+          damping: 15,
+          stiffness: 100
+        },
+        scale: {
+          type: "spring",
+          damping: 20,
+          stiffness: 100
+        }
       }
     },
     floating: {
-      y: [0, -10, 0],
+      y: [0, -15, 0],
+      rotate: [0, -1, 0, 1, 0],
       transition: {
-        duration: 3,
+        duration: 4,
         repeat: Infinity,
         repeatType: 'reverse' as const,
         ease: 'easeInOut'

@@ -98,11 +98,11 @@ export function InterestForm() {
         </div>
         
         <div>
-          <Label htmlFor="interest" className="text-black font-medium">Why are you interested in the Launch Fund?</Label>
+          <Label htmlFor="interest" className="text-black font-medium">Why are you interested in joining CEO?</Label>
           <Textarea
             id="interest"
             name="interest"
-            placeholder="Tell us about your interest in venture capital and why you'd like to join the Launch Fund when it opens..."
+            placeholder="Tell us about your interest in entrepreneurship and what you hope to gain from joining CEO..."
             required
             rows={4}
             value={formData.interest}
@@ -120,7 +120,7 @@ export function InterestForm() {
       </Button>
       
       <p className="text-xs text-black/60 text-center pt-2">
-        We'll be in touch when the program is ready for applications.
+        We'll be in touch soon about next steps.
       </p>
     </form>
   )

@@ -3,12 +3,188 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --sketch-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+    --paper-bg: #ffffff;
+    --sketch-border: rgba(0, 0, 0, 0.12);
+    --sketch-accent: rgba(0, 0, 0, 0.08);
+  }
+
   html {
     color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--paper-bg);
   }
   
   h1, h2, h3, h4, h5, h6, p, span, div:not(button *) {
     color: black;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl font-bold tracking-tight leading-[1.1];
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.02);
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight leading-tight;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.02);
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight leading-snug;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.02);
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  p {
+    @apply text-lg leading-relaxed text-black/80;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Sketch paper effect */
+  .sketch-paper {
+    background-color: var(--paper-bg);
+    box-shadow: var(--sketch-shadow);
+    border: 2px solid var(--sketch-border);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sketch-paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(90deg, transparent 39px, var(--sketch-accent) 39px, var(--sketch-accent) 41px, transparent 41px),
+      linear-gradient(var(--sketch-accent) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .sketch-paper:hover {
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.08);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Hand-drawn button effect */
+  .hand-drawn {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    transition: all 0.3s ease;
+    background-image: 
+      linear-gradient(90deg, transparent 0%, transparent 48%, rgba(0,0,0,0.02) 49%, rgba(0,0,0,0.02) 51%, transparent 52%, transparent 100%),
+      linear-gradient(transparent 0%, transparent 48%, rgba(0,0,0,0.02) 49%, rgba(0,0,0,0.02) 51%, transparent 52%, transparent 100%);
+    background-size: 6px 6px;
+  }
+
+  .hand-drawn:hover {
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  /* Sketch divider */
+  .sketch-divider {
+    height: 2px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--sketch-border),
+      var(--sketch-border) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  /* Sketch list style */
+  .sketch-list-item {
+    position: relative;
+    padding-left: 1.75rem;
+  }
+
+  .sketch-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+  }
+
+  /* Sketch text */
+  .sketch-text {
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+  }
+
+  /* Paper fold effect */
+  .paper-fold {
+    position: relative;
+  }
+
+  .paper-fold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent var(--sketch-accent) transparent transparent;
+  }
+
+  /* Contact section styles */
+  .contact-section {
+    position: relative;
+    padding: 3rem;
+    margin: 2rem 0;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--sketch-border);
+    border-radius: 3px;
+    transform: rotate(-0.5deg);
+    z-index: -1;
+  }
+
+  .contact-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--sketch-border);
+    border-radius: 3px;
+    transform: rotate(0.5deg);
+    z-index: -2;
   }
 }
 
