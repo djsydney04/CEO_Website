@@ -206,4 +206,13 @@ button, .btn {
 
 .black-btn * {
   color: white !important;
+}
+
+/* Additional style for schedule button */
+a[href*="calendly"] {
+  color: white !important;
+}
+
+a[href*="calendly"] * {
+  color: white !important;
 } 

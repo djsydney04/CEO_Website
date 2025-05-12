@@ -116,13 +116,14 @@ export default function CoffeeChat({ variant = 'page', showHeader = true }: Coff
                       href={member.calendly}
                       className={`
                         ${isLanding ? 'px-4 py-2 text-sm' : 'px-5 py-2.5 text-sm'} 
-                        black-btn rounded-lg w-full text-center font-medium
+                        bg-black text-[#ffffff] inline-block
                         hover:bg-black/90 transition-colors duration-200
-                        border border-black/90 whitespace-nowrap
+                        border border-black/90 whitespace-nowrap w-full text-center font-medium
                       `}
+                      style={{color: 'white'}}
                       target="_blank"
                     >
-                      Schedule a Chat
+                      <div className="text-white" style={{color: 'white'}}>Schedule a Chat</div>
                     </Link>
                     <div className="flex gap-2">
                       {member.linkedin && (

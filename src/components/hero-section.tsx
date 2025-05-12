@@ -262,11 +262,12 @@ export default function HeroSection() {
                           <div className="flex flex-col gap-3 w-full">
                             <Link
                               href={member.calendly}
-                              className="px-5 py-2.5 text-sm black-btn rounded-lg w-full text-center font-medium
-                                       transition-colors duration-200 border border-black/90 hand-drawn"
+                              className="px-5 py-2.5 text-sm bg-black text-[#ffffff] inline-block
+                                       transition-colors duration-200 border border-black/90 w-full text-center font-medium"
+                              style={{color: 'white'}}
                               target="_blank"
                             >
-                              Schedule a Chat
+                              <div className="text-white" style={{color: 'white'}}>Schedule a Chat</div>
                             </Link>
                             <div className="flex gap-2">
                               {member.linkedin && (
