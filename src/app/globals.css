@@ -191,4 +191,9 @@
 /* Override to preserve button text color */
 button, .btn {
   color: inherit;
+}
+
+/* Force white text for schedule buttons */
+.white-button-text {
+  color: white !important;
 } 

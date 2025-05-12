@@ -264,10 +264,9 @@ export default function HeroSection() {
                               href={member.calendly}
                               className="px-5 py-2.5 text-sm bg-black hover:bg-black/90 text-white rounded-lg w-full text-center font-medium
                                        transition-colors duration-200 border border-black/90 hand-drawn"
-                              style={{ color: 'white' }}
                               target="_blank"
                             >
-                              Schedule a Chat
+                              <span className="white-button-text">Schedule a Chat</span>
                             </Link>
                             <div className="flex gap-2">
                               {member.linkedin && (
