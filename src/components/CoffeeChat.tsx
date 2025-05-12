@@ -113,11 +113,10 @@ export default function CoffeeChat({ variant = 'page' }: CoffeeChatProps) {
                       href={member.calendly}
                       className={`
                         ${isLanding ? 'px-4 py-2 text-sm' : 'px-5 py-2.5 text-sm'} 
-                        bg-black text-white rounded-lg w-full text-center font-medium
-                        hover:bg-black/90 transition-colors duration-200
+                        bg-black text-white [&]:text-white rounded-lg w-full text-center font-medium
+                        hover:bg-black/90 hover:text-white transition-colors duration-200
                         border border-black/90
                       `}
-                      style={{ color: 'white !important' }}
                       target="_blank"
                     >
                       Schedule a Chat
