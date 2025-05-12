@@ -260,20 +260,29 @@ export default function HeroSection() {
                           <p className="text-black/70 text-sm mb-6 sketch-text">{member.role}</p>
                           
                           <div className="flex flex-col gap-3 w-full">
-                            <a
-                              href={member.calendly}
-                              className="px-5 py-2.5 text-sm bg-black inline-block
-                                       w-full text-center font-medium"
-                              style={{
-                                backgroundColor: "black",
-                                color: "white",
-                                borderRadius: "8px",
-                                border: "1px solid rgba(0,0,0,0.9)"
-                              }}
-                              target="_blank"
-                            >
-                              <span style={{color: "white"}}>Schedule a Chat</span>
-                            </a>
+                            <div dangerouslySetInnerHTML={{
+                              __html: `
+                                <a 
+                                  href="${member.calendly}" 
+                                  target="_blank"
+                                  style="
+                                    display: block;
+                                    background-color: #000000;
+                                    color: #ffffff !important;
+                                    padding: 10px 20px;
+                                    margin: 0;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    text-align: center;
+                                    border-radius: 8px;
+                                    border: 1px solid rgba(0,0,0,0.9);
+                                    text-decoration: none;
+                                  "
+                                >
+                                  <span style="color: #ffffff !important;">Schedule a Chat</span>
+                                </a>
+                              `
+                            }} />
                             <div className="flex gap-2">
                               {member.linkedin && (
                                 <Link 
