@@ -20,7 +20,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white md:border-none border-b border-black/10">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="max-w-6xl mx-auto flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
@@ -107,7 +107,7 @@ export function Navigation() {
             className="md:hidden bg-white border-t border-black/10"
           >
             <div className="container mx-auto px-4 py-4">
-              <div className="flex flex-col space-y-4">
+              <div className="max-w-6xl mx-auto flex flex-col space-y-4">
                 {links.map((link) => (
                   <Link
                     key={link.href}

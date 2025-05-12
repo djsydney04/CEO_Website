@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Footer } from '@/components/footer'
 import { ScrollAnimation } from '@/components/scroll-animation'
 import { BackgroundGrid } from '@/components/background-grid'
+import { SpeakerLogos } from '@/components/speaker-logos'
 
 export default function OrbitPage() {
   return (
@@ -13,32 +14,32 @@ export default function OrbitPage() {
       <BackgroundGrid />
       <Navigation />
       
-      <main className="pt-28 pb-24 px-4 sm:px-6">
-        <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
+      {/* Paper texture overlay */}
+      <div className="paper-texture"></div>
+      
+      <main className="pt-32 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
-            <section className="mb-24">
+            <section className="mb-28">
               <ScrollAnimation type="fade">
                 <div className="inline-block mb-4">
-                  <span className="text-black/80 text-sm font-medium bg-white/70 px-4 py-2 rounded-lg border border-black/10 shadow-sm">
+                  <span className="bg-black/5 text-black px-6 py-2 hand-drawn text-sm font-medium sketch-text">
                     Founders Track
                   </span>
                 </div>
                 <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 tracking-tight leading-[1.1]">
                   Chapman Orbit
                 </h1>
-                <div className="h-[3px] w-32 bg-black/20 mb-10"></div>
-                <div className="max-w-2xl relative">
-                  <p className="text-lg text-black/80 mb-8 leading-relaxed">
+                <div className="sketch-divider w-24 mb-10"></div>
+                <div className="max-w-2xl">
+                  <p className="sketch-text text-lg text-black/80 mb-8 leading-relaxed">
                     Built by students. Run by builders. Chapman Orbit is a student-led program for Chapman's most driven founders. Unlike traditional university incubators, Orbit isn't faculty-run —it's designed by students who are actively building real products. Whether you're coding an MVP, testing with early users, or figuring out how to get your first 100 customers, Orbit is your launchpad to work shoulder-to-shoulder with other students.
                   </p>
-                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf6SHi4DtuZp7pueAYpuPHtSh7f4mv-jIKPt0UjemnKFUbL6Q/viewform?usp=sharing">
-                    <Button className="bg-black text-white px-8 py-3 rounded-xl 
-                                    shadow-[2px_2px_0px_rgba(0,0,0,0.1)]
-                                    hover:shadow-[4px_4px_0px_rgba(0,0,0,0.1)]
-                                    hover:translate-x-[-2px] hover:translate-y-[-2px]
-                                    transition-all duration-200
-                                    border border-black/90">
+                  <Link href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b">
+                    <Button className="bg-black text-white px-8 py-3 hand-drawn
+                                    hover:bg-black/90 text-white !text-white
+                                    transition-all duration-200">
                       Apply to Orbit
                     </Button>
                   </Link>
@@ -47,10 +48,22 @@ export default function OrbitPage() {
             </section>
 
             {/* What Makes Orbit Different */}
-            <section className="mb-24">
+            <section className="mb-28">
               <ScrollAnimation type="fade">
-                <h2 className="text-3xl font-bold text-black mb-4 tracking-tight">What Makes Orbit Different</h2>
-                <p className="text-lg text-black/80 mb-12 leading-relaxed">A peer-driven space focused on doing, not just planning.</p>
+                <div className="mb-16">
+                  <div className="inline-block mb-4">
+                    <span className="bg-black/5 text-black px-6 py-2 hand-drawn text-sm font-medium sketch-text">
+                      Our Approach
+                    </span>
+                  </div>
+                  <h2 className="mb-8">What Makes Orbit Different</h2>
+                  <div className="sketch-divider w-24 mb-8"></div>
+                  <div className="max-w-3xl">
+                    <p className="mb-6 sketch-text">
+                      A peer-driven space focused on doing, not just planning.
+                    </p>
+                  </div>
+                </div>
 
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
                   {[
@@ -68,18 +81,9 @@ export default function OrbitPage() {
                     }
                   ].map((item, index) => (
                     <div key={index} 
-                         className={`bg-white/40 backdrop-blur-sm rounded-xl p-8 space-y-4 
-                                   hover:bg-white/50 transition-all duration-300
-                                   border-2 border-black/10
-                                   shadow-[4px_4px_10px_rgba(0,0,0,0.05)]
-                                   hover:shadow-[6px_6px_12px_rgba(0,0,0,0.08)]
-                                   relative overflow-hidden`}>
-                      {/* Grid Background */}
-                      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
-                      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
-                      
-                      <h3 className="text-xl font-semibold text-black tracking-tight relative">{item.title}</h3>
-                      <p className="text-black/80 leading-relaxed relative">
+                         className="sketch-paper p-8 paper-fold">
+                      <h3 className="text-xl font-semibold text-black mb-4 tracking-tight sketch-text">{item.title}</h3>
+                      <p className="text-black/80 leading-relaxed sketch-text">
                         {item.description}
                       </p>
                     </div>
@@ -89,13 +93,21 @@ export default function OrbitPage() {
             </section>
 
             {/* Who Should Apply */}
-            <section className="mb-24">
+            <section className="mb-28">
               <ScrollAnimation type="fade">
-                <div className="max-w-2xl mb-12">
-                  <h2 className="text-3xl font-bold text-black mb-4 tracking-tight">Who Should Apply</h2>
-                  <p className="text-lg text-black/80 leading-relaxed">
-                    Whether you're writing code, talking to customers, or just shipped something last week—we want to hear from you.
-                  </p>
+                <div className="mb-16">
+                  <div className="inline-block mb-4">
+                    <span className="bg-black/5 text-black px-6 py-2 hand-drawn text-sm font-medium sketch-text">
+                      Ideal Candidates
+                    </span>
+                  </div>
+                  <h2 className="mb-8">Who Should Apply</h2>
+                  <div className="sketch-divider w-24 mb-8"></div>
+                  <div className="max-w-3xl">
+                    <p className="mb-6 sketch-text">
+                      Whether you're writing code, talking to customers, or just shipped something last week—we want to hear from you.
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -111,18 +123,9 @@ export default function OrbitPage() {
                       }
                     ].map((item, index) => (
                       <div key={index} 
-                           className="bg-white/40 backdrop-blur-sm rounded-xl p-8 space-y-4 
-                                    hover:bg-white/50 transition-all duration-300
-                                    border-2 border-black/10
-                                    shadow-[4px_4px_10px_rgba(0,0,0,0.05)]
-                                    hover:shadow-[6px_6px_12px_rgba(0,0,0,0.08)]
-                                    relative overflow-hidden">
-                        {/* Grid Background */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
-                        
-                        <h3 className="text-xl font-semibold text-black tracking-tight relative">{item.title}</h3>
-                        <p className="text-black/80 leading-relaxed relative">
+                           className="sketch-paper p-8 paper-fold">
+                        <h3 className="text-xl font-semibold text-black mb-4 tracking-tight sketch-text">{item.title}</h3>
+                        <p className="text-black/80 leading-relaxed sketch-text">
                           {item.description}
                         </p>
                       </div>
@@ -141,18 +144,9 @@ export default function OrbitPage() {
                       }
                     ].map((item, index) => (
                       <div key={index} 
-                           className="bg-white/40 backdrop-blur-sm rounded-xl p-8 space-y-4 
-                                    hover:bg-white/50 transition-all duration-300
-                                    border-2 border-black/10
-                                    shadow-[4px_4px_10px_rgba(0,0,0,0.05)]
-                                    hover:shadow-[6px_6px_12px_rgba(0,0,0,0.08)]
-                                    relative overflow-hidden">
-                        {/* Grid Background */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
-                        
-                        <h3 className="text-xl font-semibold text-black tracking-tight relative">{item.title}</h3>
-                        <p className="text-black/80 leading-relaxed relative">
+                           className="sketch-paper p-8 paper-fold">
+                        <h3 className="text-xl font-semibold text-black mb-4 tracking-tight sketch-text">{item.title}</h3>
+                        <p className="text-black/80 leading-relaxed sketch-text">
                           {item.description}
                         </p>
                       </div>
@@ -163,13 +157,21 @@ export default function OrbitPage() {
             </section>
 
             {/* How Orbit Works */}
-            <section className="mb-24">
+            <section className="mb-28">
               <ScrollAnimation type="fade">
-                <div className="max-w-2xl mb-12">
-                  <h2 className="text-3xl font-bold text-black mb-4 tracking-tight">How Orbit Works</h2>
-                  <p className="text-lg text-black/80 leading-relaxed">
-                    A high-speed, hands-on track that prioritizes product and traction.
-                  </p>
+                <div className="mb-16">
+                  <div className="inline-block mb-4">
+                    <span className="bg-black/5 text-black px-6 py-2 hand-drawn text-sm font-medium sketch-text">
+                      The Process
+                    </span>
+                  </div>
+                  <h2 className="mb-8">How Orbit Works</h2>
+                  <div className="sketch-divider w-24 mb-8"></div>
+                  <div className="max-w-3xl">
+                    <p className="mb-6 sketch-text">
+                      A high-speed, hands-on track that prioritizes product and traction.
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="space-y-16">
@@ -198,35 +200,27 @@ export default function OrbitPage() {
                   ].map((step, index) => (
                     <div key={index} className="relative">
                       <div className="flex items-center mb-6">
-                        <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white font-semibold mr-4 
-                                      shadow-[2px_2px_0px_rgba(0,0,0,0.1)]">
+                        <div className="w-12 h-12 bg-black hand-drawn flex items-center justify-center text-white font-semibold mr-4">
                           {step.number}
                         </div>
-                        <h3 className="text-2xl font-semibold text-black tracking-tight">{step.title}</h3>
+                        <h3 className="text-2xl font-semibold text-black tracking-tight sketch-text">{step.title}</h3>
                       </div>
                       <div className="ml-16">
-                        <p className="text-lg text-black/80 leading-relaxed mb-8">
+                        <p className="text-lg text-black/80 leading-relaxed mb-8 sketch-text">
                           {step.description}
                         </p>
                         {step.items && (
                           <div className="grid md:grid-cols-3 gap-6 mb-8">
                             {step.items.map((item, i) => (
                               <div key={i} 
-                                   className="bg-white/40 backdrop-blur-sm rounded-lg p-4 
-                                            border-2 border-black/10
-                                            shadow-[2px_2px_0px_rgba(0,0,0,0.05)]
-                                            relative overflow-hidden">
-                                {/* Grid Background */}
-                                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
-                                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
-                                
-                                <p className="text-black/80 relative">{item}</p>
+                                   className="sketch-paper p-4 paper-fold">
+                                <p className="text-black/80 sketch-text">{item}</p>
                               </div>
                             ))}
                           </div>
                         )}
                         {step.footer && (
-                          <p className="text-lg text-black/80 leading-relaxed">
+                          <p className="text-lg text-black/80 leading-relaxed sketch-text">
                             {step.footer}
                           </p>
                         )}
@@ -238,35 +232,29 @@ export default function OrbitPage() {
             </section>
 
             {/* Speakers & Mentors */}
-            <section className="mb-24">
+            <section className="mb-28">
+              <SpeakerLogos />
+            </section>
+
+            {/* Apply Now CTA */}
+            <section className="mb-28">
               <ScrollAnimation type="fade">
-                <div className="max-w-2xl mb-12">
-                  <h2 className="text-3xl font-bold text-black mb-4 tracking-tight">Speakers & Mentors</h2>
-                  <p className="text-lg text-black/80 leading-relaxed">
-                    We bring in alumni and operators who've actually built something.
+                <div className="sketch-paper p-16 paper-fold text-center">
+                  <h2 className="mb-6 sketch-text">Ready to Join Orbit?</h2>
+                  <div className="sketch-divider w-24 mx-auto mb-8"></div>
+                  <p className="mb-8 sketch-text max-w-2xl mx-auto">
+                    If you're ready to take your startup journey to the next level, we want to hear from you. Apply now to join our next cohort of founders.
                   </p>
-                </div>
-                
-                <div className="grid md:grid-cols-3 gap-8">
-                  {[
-                    "Founders who've launched and scaled",
-                    "Engineers and PMs from breakout startups",
-                    "Investors who have funded top companies at the earliest stages"
-                  ].map((text, index) => (
-                    <div key={index} 
-                         className="bg-white/40 backdrop-blur-sm rounded-xl p-6 
-                                  hover:bg-white/50 transition-all duration-300
-                                  border-2 border-black/10
-                                  shadow-[4px_4px_10px_rgba(0,0,0,0.05)]
-                                  hover:shadow-[6px_6px_12px_rgba(0,0,0,0.08)]
-                                  relative overflow-hidden">
-                      {/* Grid Background */}
-                      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
-                      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
-                      
-                      <p className="text-black/80 leading-relaxed relative">{text}</p>
-                    </div>
-                  ))}
+                  <Link 
+                    href="https://cotton-pea-590.notion.site/1ca3b389b4ca80538086ce34809da29b"
+                    className="inline-block"
+                  >
+                    <Button className="bg-black text-white px-12 py-4 hand-drawn text-lg
+                                    hover:bg-black/90 text-white !text-white
+                                    transition-all duration-200">
+                      Apply to Orbit
+                    </Button>
+                  </Link>
                 </div>
               </ScrollAnimation>
             </section>
@@ -275,5 +263,5 @@ export default function OrbitPage() {
       </main>
       <Footer />
     </div>
-  );
+  )
 } 
