@@ -4,9 +4,10 @@ import { ScrollAnimation, StaggerContainer, StaggerItem } from '@/components/scr
 
 interface CoffeeChatProps {
   variant?: 'landing' | 'page';
+  showHeader?: boolean;
 }
 
-export default function CoffeeChat({ variant = 'page' }: CoffeeChatProps) {
+export default function CoffeeChat({ variant = 'page', showHeader = true }: CoffeeChatProps) {
   const teamMembers = [
     {
       name: 'Grant Werlin',
@@ -47,34 +48,36 @@ export default function CoffeeChat({ variant = 'page' }: CoffeeChatProps) {
       </div>
 
       <div className="container mx-auto px-4">
-        {isLanding ? (
-          <ScrollAnimation type="slide-up" className="max-w-2xl mx-auto text-center mb-12">
-            <div className="inline-block mb-4">
-              <span className="text-black/70 text-sm font-medium bg-white/70 px-4 py-2 rounded-lg border border-black/10 shadow-sm">Let's Chat</span>
-            </div>
-            <h2 className="text-2xl font-medium text-black mb-4 tracking-tight">Got an idea? Want to learn more?</h2>
-            <p className="text-base text-black/80 mb-2 leading-relaxed">
-              Whether you're a current member working on an idea, interested in Orbit, or just want to learn more about CEO—we're here to help.
-            </p>
-            <p className="text-sm text-black/60 font-light">
-              Schedule a casual conversation with our team leads about entrepreneurship at Chapman.
-            </p>
-          </ScrollAnimation>
-        ) : (
-          <ScrollAnimation type="slide-up" className="mb-16">
-            <div className="inline-block mb-4">
-              <span className="text-black/80 text-sm font-medium bg-white/70 px-4 py-2 rounded-lg border border-black/10 shadow-sm">Connect With Us</span>
-            </div>
-            <h2 className="text-4xl font-bold text-black mb-6 tracking-tight">Coffee Chat</h2>
-            <div className="max-w-2xl">
-              <p className="text-lg text-black/80 mb-3 leading-relaxed">
-                Whether you're working on a startup idea, curious about Orbit, or want to get more involved with CEO—we'd love to chat.
+        {showHeader && (
+          isLanding ? (
+            <ScrollAnimation type="slide-up" className="max-w-2xl mx-auto text-center mb-12">
+              <div className="inline-block mb-4">
+                <span className="text-black/70 text-sm font-medium bg-white/70 px-4 py-2 rounded-lg border border-black/10 shadow-sm">Let's Chat</span>
+              </div>
+              <h2 className="text-2xl font-medium text-black mb-4 tracking-tight">Got an idea? Want to learn more?</h2>
+              <p className="text-base text-black/80 mb-2 leading-relaxed">
+                Whether you're a current member working on an idea, interested in Orbit, or just want to learn more about CEO—we're here to help.
               </p>
-              <p className="text-base text-black/70 leading-relaxed">
-                Book a time with our team leads to discuss your entrepreneurial journey, get feedback on your ideas, or learn more about our programs.
+              <p className="text-sm text-black/60 font-light">
+                Schedule a casual conversation with our team leads about entrepreneurship at Chapman.
               </p>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          ) : (
+            <ScrollAnimation type="slide-up" className="mb-16">
+              <div className="inline-block mb-4">
+                <span className="text-black/80 text-sm font-medium bg-white/70 px-4 py-2 rounded-lg border border-black/10 shadow-sm">Connect With Us</span>
+              </div>
+              <h2 className="text-4xl font-bold text-black mb-6 tracking-tight">Coffee Chat</h2>
+              <div className="max-w-2xl">
+                <p className="text-lg text-black/80 mb-3 leading-relaxed">
+                  Whether you're working on a startup idea, curious about Orbit, or want to get more involved with CEO—we'd love to chat.
+                </p>
+                <p className="text-base text-black/70 leading-relaxed">
+                  Book a time with our team leads to discuss your entrepreneurial journey, get feedback on your ideas, or learn more about our programs.
+                </p>
+              </div>
+            </ScrollAnimation>
+          )
         )}
 
         <StaggerContainer className={`grid md:grid-cols-3 gap-12 ${isLanding ? 'max-w-5xl' : 'max-w-6xl'} mx-auto`}>
@@ -113,13 +116,13 @@ export default function CoffeeChat({ variant = 'page' }: CoffeeChatProps) {
                       href={member.calendly}
                       className={`
                         ${isLanding ? 'px-4 py-2 text-sm' : 'px-5 py-2.5 text-sm'} 
-                        bg-black rounded-lg w-full text-center font-medium
+                        black-btn rounded-lg w-full text-center font-medium
                         hover:bg-black/90 transition-colors duration-200
                         border border-black/90 whitespace-nowrap
                       `}
                       target="_blank"
                     >
-                      <span className="white-button-text">Schedule a Chat</span>
+                      Schedule a Chat
                     </Link>
                     <div className="flex gap-2">
                       {member.linkedin && (

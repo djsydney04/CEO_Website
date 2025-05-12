@@ -34,7 +34,7 @@ export default function CoffeeChatPage() {
             </section>
 
             {/* Coffee Chat Section */}
-            <CoffeeChat />
+            <CoffeeChat showHeader={false} />
           </div>
         </div>
       </main>

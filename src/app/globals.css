@@ -196,4 +196,14 @@ button, .btn {
 /* Force white text for schedule buttons */
 .white-button-text {
   color: white !important;
+}
+
+/* Black button with white text */
+.black-btn {
+  background-color: black;
+  color: white !important;
+}
+
+.black-btn * {
+  color: white !important;
 } 
