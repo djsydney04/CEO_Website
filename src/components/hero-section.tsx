@@ -260,15 +260,20 @@ export default function HeroSection() {
                           <p className="text-black/70 text-sm mb-6 sketch-text">{member.role}</p>
                           
                           <div className="flex flex-col gap-3 w-full">
-                            <Link
+                            <a
                               href={member.calendly}
-                              className="px-5 py-2.5 text-sm bg-black text-[#ffffff] inline-block
-                                       transition-colors duration-200 border border-black/90 w-full text-center font-medium"
-                              style={{color: 'white'}}
+                              className="px-5 py-2.5 text-sm bg-black inline-block
+                                       w-full text-center font-medium"
+                              style={{
+                                backgroundColor: "black",
+                                color: "white",
+                                borderRadius: "8px",
+                                border: "1px solid rgba(0,0,0,0.9)"
+                              }}
                               target="_blank"
                             >
-                              <div className="text-white" style={{color: 'white'}}>Schedule a Chat</div>
-                            </Link>
+                              <span style={{color: "white"}}>Schedule a Chat</span>
+                            </a>
                             <div className="flex gap-2">
                               {member.linkedin && (
                                 <Link 

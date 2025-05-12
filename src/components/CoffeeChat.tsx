@@ -112,19 +112,23 @@ export default function CoffeeChat({ variant = 'page', showHeader = true }: Coff
                   
                   {/* Buttons and Links */}
                   <div className="flex flex-col gap-3 w-full">
-                    <Link
+                    <a
                       href={member.calendly}
                       className={`
                         ${isLanding ? 'px-4 py-2 text-sm' : 'px-5 py-2.5 text-sm'} 
-                        bg-black text-[#ffffff] inline-block
-                        hover:bg-black/90 transition-colors duration-200
-                        border border-black/90 whitespace-nowrap w-full text-center font-medium
+                        bg-black inline-block
+                        w-full text-center font-medium
                       `}
-                      style={{color: 'white'}}
+                      style={{
+                        backgroundColor: "black",
+                        color: "white",
+                        borderRadius: "8px",
+                        border: "1px solid rgba(0,0,0,0.9)"
+                      }}
                       target="_blank"
                     >
-                      <div className="text-white" style={{color: 'white'}}>Schedule a Chat</div>
-                    </Link>
+                      <span style={{color: "white"}}>Schedule a Chat</span>
+                    </a>
                     <div className="flex gap-2">
                       {member.linkedin && (
                         <Link 
