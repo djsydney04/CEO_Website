@@ -117,6 +117,7 @@ export default function CoffeeChat({ variant = 'page' }: CoffeeChatProps) {
                         hover:bg-black/90 transition-colors duration-200
                         border border-black/90
                       `}
+                      style={{ color: 'white !important' }}
                       target="_blank"
                     >
                       Schedule a Chat
