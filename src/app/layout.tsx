@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://chapmanentrepreneurs.org'),
   title: {
-    template: '%s | Chapman CEO',
-    default: 'Chapman CEO',
+    template: '%s | Chapman Entrepreneurs Organization',
+    default: 'Chapman Entrepreneurs Organization',
   },
-  description: "Chapman Entrepreneurship Organization",
+  description: "Chapman Entrepreneurs Organization",
   icons: {
     icon: '/CeoSymbol.svg',
     apple: '/CeoSymbol.svg',
@@ -20,28 +20,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: {
-      template: '%s | Chapman CEO',
-      default: 'Chapman CEO',
+      template: '%s | Chapman Entrepreneurs Organization',
+      default: 'Chapman Entrepreneurs Organization',
     },
-    description: 'Chapman Entrepreneurship Organization',
+    description: 'Chapman Entrepreneurs Organization',
     url: 'https://chapmanentrepreneurs.org',
-    siteName: 'Chapman CEO',
+    siteName: 'Chapman Entrepreneurs Organization',
     images: [
       {
         url: '/@CEOPreview.png',
         width: 1200,
         height: 630,
-        alt: 'Chapman CEO Preview'
+        alt: 'Chapman Entrepreneurs Organization Preview'
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      template: '%s | Chapman CEO',
-      default: 'Chapman CEO',
+      template: '%s | Chapman Entrepreneurs Organization',
+      default: 'Chapman Entrepreneurs Organization',
     },
-    description: 'Chapman Entrepreneurship Organization',
+    description: 'Chapman Entrepreneurs Organization',
     images: ['/@CEOPreview.png'],
   },
 };
