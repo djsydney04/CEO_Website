@@ -3,10 +3,10 @@ import CoffeeChatPageContent from './CoffeeChatPageContent'
 
 export const metadata: Metadata = {
   title: 'Coffee Chat',
-  description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you're working on a startup idea or want to learn more about CEO, we'd love to chat.',
+  description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you\'re working on a startup idea or want to learn more about CEO, we\'d love to chat.',
   openGraph: {
     title: 'Coffee Chat',
-    description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you're working on a startup idea or want to learn more about CEO, we'd love to chat.',
+    description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you\'re working on a startup idea or want to learn more about CEO, we\'d love to chat.',
     url: 'https://chapmanentrepreneurs.org/coffee-chat',
     siteName: 'Chapman Entrepreneurs Organization',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Coffee Chat',
-    description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you're working on a startup idea or want to learn more about CEO, we'd love to chat.',
+    description: 'Schedule a casual conversation with our team leads about entrepreneurship at Chapman. Whether you\'re working on a startup idea or want to learn more about CEO, we\'d love to chat.',
     images: ['/@CEOPreview.png'],
   },
 }

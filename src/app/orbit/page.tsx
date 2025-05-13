@@ -3,10 +3,10 @@ import OrbitPageContent from './OrbitPageContent'
 
 export const metadata: Metadata = {
   title: 'Chapman Orbit',
-  description: 'Join Chapman Orbit, a student-led program for Chapman's most driven founders. Work alongside other student builders to launch and grow your startup.',
+  description: 'Join Chapman Orbit, a student-led program for Chapman\'s most driven founders. Work alongside other student builders to launch and grow your startup.',
   openGraph: {
     title: 'Chapman Orbit',
-    description: 'Join Chapman Orbit, a student-led program for Chapman's most driven founders. Work alongside other student builders to launch and grow your startup.',
+    description: 'Join Chapman Orbit, a student-led program for Chapman\'s most driven founders. Work alongside other student builders to launch and grow your startup.',
     url: 'https://chapmanentrepreneurs.org/orbit',
     siteName: 'Chapman Entrepreneurs Organization',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chapman Orbit',
-    description: 'Join Chapman Orbit, a student-led program for Chapman's most driven founders. Work alongside other student builders to launch and grow your startup.',
+    description: 'Join Chapman Orbit, a student-led program for Chapman\'s most driven founders. Work alongside other student builders to launch and grow your startup.',
     images: ['/@CEOPreview.png'],
   },
 }
