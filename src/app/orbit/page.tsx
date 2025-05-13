@@ -1,12 +1,3 @@
-'use client'
-
-import { Navigation } from '@/components/navigation'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { Footer } from '@/components/footer'
-import { ScrollAnimation } from '@/components/scroll-animation'
-import { BackgroundGrid } from '@/components/background-grid'
-import { SpeakerLogos } from '@/components/speaker-logos'
 import type { Metadata } from 'next'
 import OrbitPageContent from './OrbitPageContent'
 

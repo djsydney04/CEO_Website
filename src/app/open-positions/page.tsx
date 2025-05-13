@@ -1,9 +1,3 @@
-'use client'
-
-import { Navigation } from '@/components/navigation'
-import { Footer } from '@/components/footer'
-import { Button } from '@/components/ui/button'
-import { ScrollAnimation } from '@/components/scroll-animation'
 import type { Metadata } from 'next'
 import OpenPositionsPageContent from './OpenPositionsPageContent'
 
