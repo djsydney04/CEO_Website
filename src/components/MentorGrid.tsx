@@ -47,7 +47,18 @@ export default function MentorGrid() {
   return (
     <section className="relative">
       <div className="relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-16">Our Mentors</h2>
+        <div className="max-w-3xl mb-16">
+          <div className="inline-block mb-4">
+            <span className="bg-black/5 text-black px-6 py-2 hand-drawn text-sm font-medium sketch-text">
+              Meet Our Mentors
+            </span>
+          </div>
+          <h2 className="text-3xl font-bold mb-8">Our Mentors</h2>
+          <div className="sketch-divider w-24 mb-8"></div>
+          <p className="text-lg text-black/80 leading-relaxed sketch-text">
+            Stuck on a real problem? Our mentors are founders, investors, and operators who've built, scaled, and invested in real companies - people who know what it's like to be in your shoes. Whether you're wrestling with product, growth, fundraising, or just need someone who's been there before, our mentors are here to help you move forward fast. If you want to get connected with a mentor, reach out to Michael or Dylan.
+          </p>
+        </div>
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {mentors.map((mentor, index) => (
             <StaggerItem key={index} index={index}>
